@@ -1,0 +1,532 @@
+/*================ #Color Variables ================*/
+
+:root {
+    --primary-color: #6c36f5;
+    --secondary-color: #0f0f11;
+    --white-color: #fff;
+    --black-color: #000;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/*================ #Variables ================*/
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black-color);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 50%;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+
+/* 
+    Loader
+*/
+
+.loader {
+    display: inline
+}
+
+.loader_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    max-height: 0%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+    background: #fff;
+    -webkit-transition: opacity .8s, max-height 0s .8s;
+    -o-transition: opacity .8s, max-height 0s .8s;
+    -moz-transition: opacity .8s, max-height 0s .8s;
+    transition: opacity .8s, max-height 0s .8s
+}
+
+.loader_overlay.-visible {
+    pointer-events: auto;
+    opacity: 1;
+    max-height: 100%;
+    -webkit-transition-delay: 0s, 0s;
+    -moz-transition-delay: 0s, 0s;
+    -o-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s
+}
+
+
+/*================ #Typography Variables ================*/
+
+@font-face {
+    font-family: "Archivo Narrow";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://fonts.shopifycdn.com/archivo_narrow/archivonarrow_n7.5a454828f1b15eb7f722cdb2f2e1b3909f34b3c8.woff2?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=a47ca4e681bd3373dd502e4136a896ec23ddeaffc36ffd6b0a0fc597d59f7985") format("woff2"), url("https://fonts.shopifycdn.com/archivo_narrow/archivonarrow_n7.2302d0d268e852afb8ea084cc2157e4fa8df66de.woff?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=5c932b5bc11b463a95ef10798185ba00c0d37f7975665cf9c4042b17adf8bbaa") format("woff");
+}
+
+@font-face {
+    font-family: "Swiss 721";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://fonts.shopifycdn.com/swiss_721/swiss721_n4.f6382e9c4f554f3e521691eb0063f353bccaac61.woff2?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=9aa9793f95faf0f5c164fe01bd87cc3afa9ed1b9971e52a52f61cfd766aa40f3") format("woff2"), url("https://fonts.shopifycdn.com/swiss_721/swiss721_n4.d8ac88e504ed86054a0ab48468805fbb9dd8e781.woff?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=6f653cf986bdbeca418f2d2d356cb58f7987f420af33f869f7ce88946f889b95") format("woff");
+}
+
+@font-face {
+    font-family: "Swiss 721";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://fonts.shopifycdn.com/swiss_721/swiss721_n7.001710b00ed28aaa567f4ef1e31129557f3cfa3a.woff2?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=df73ddeeea0a3afbfe093b7cb5c6dd83319a5b84436b44c531e46b534bb42dcb") format("woff2"), url("https://fonts.shopifycdn.com/swiss_721/swiss721_n7.face333fa2aec65a88da642889e6698d72688142.woff?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=03d65b6001ab866ae4e385fc5e19745ea04d94cb0f7216550c2e973f66a3ddc9") format("woff");
+}
+
+@font-face {
+    font-family: "Swiss 721";
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://fonts.shopifycdn.com/swiss_721/swiss721_i4.d83f0ed9b14f24fe685c5b55783f9e99c775a015.woff2?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=ca66c2f89ce14ceb02814a5d320a7409a25cbeb92179f796cea931f185a53a31") format("woff2"), url("https://fonts.shopifycdn.com/swiss_721/swiss721_i4.226908cb9fde8fd37483fd2472a9416e61ee6084.woff?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=1ee7f86a90bf49f4a206f49cbc20fe25f9728853d1454786cefed0233ae3c467") format("woff");
+}
+
+@font-face {
+    font-family: "Swiss 721";
+    font-weight: 700;
+    font-style: italic;
+    src: url("https://fonts.shopifycdn.com/swiss_721/swiss721_i7.c7410fd03ea3bedc92f1993f148843d080de23f4.woff2?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=0d5168cd03375cc3709593e9c9deefdcddf69be4aa6333871b8f2198e22616ef") format("woff2"), url("https://fonts.shopifycdn.com/swiss_721/swiss721_i7.233ca2badb06c09d849db6bf3569ac673ad27432.woff?h1=aWRsZWhvdXJ2b2RrYS5jb20&hmac=3acec9631cde2cd52dcad500254c817510aa470474f74e89809e946983652d05") format("woff");
+}
+
+@font-face {
+    font-family: 'icons';
+    src: url("//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/icons.eot?v=2002815656684037727");
+    src: url("//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/icons.eot?v=2002815656684037727#iefix") format("embedded-opentype"), url("//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/icons.woff?v=1501793824200877814") format("woff"), url("//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/icons.ttf?v=2721982321323709976") format("truetype"), url("//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/icons.svg?v=18173388395094512039#shop-icons") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/*============================================================================
+#Links and Buttons
+==============================================================================*/
+
+
+/*============================================================================
+#Images and Iframes
+==============================================================================*/
+
+img {
+    max-width: 100%;
+    border: 0;
+}
+
+@media screen and (min-width: 1080px) {
+    .content__type {
+        max-width: 60%;
+    }
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../img/zgowie.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    height: auto;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*============================================================================
+#Forms
+==============================================================================*/
+
+@media only screen and (max-width: 989px) {
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+    }
+}
+
+fieldset {
+    border: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #eeeeee;
+    max-width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #d4d4d4;
+}
+
+input[disabled],
+textarea[disabled],
+select[disabled] {
+    cursor: default;
+    background-color: #e0e0e0;
+    border-color: black;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+
+/*================ Keyframe animations ================*/
+
+@-webkit-keyframes fadeIn {
+    0%,
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0%,
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes heroContentIn {
+    0%,
+    35% {
+        opacity: 0;
+        -ms-transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    40% {
+        -ms-transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroContentIn {
+    0%,
+    35% {
+        opacity: 0;
+        -ms-transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    40% {
+        -ms-transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/*================ THEME FUNCTIONS ================*/
+
+
+/*================ GLOBAL ================*/
+
+
+/*================ Grid | No gutters ================*/
+
+.grid--no-gutters {
+    margin-left: 0;
+}
+
+.grid--no-gutters>.grid__item {
+    padding-left: 0;
+}
+
+
+/*================ Grid | Half gutters ================*/
+
+.grid--half-gutters {
+    margin-left: -10px;
+}
+
+.grid--half-gutters>.grid__item {
+    padding-left: 10px;
+}
+
+
+/*================ Grid | Vertically centered items ================*/
+
+.grid--table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-left: 0;
+}
+
+.grid--table>.grid__item {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 1px;
+    padding-left: 0;
+}
+
+@media only screen and (min-width: 990px) {
+    .large-up--grid--table {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        margin-left: 0;
+    }
+    .large-up--grid--table>.grid__item {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+        min-height: 1px;
+        padding-left: 0;
+    }
+}
+
+
+/*================ General theme related layout ================*/
+
+.page-gutter {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media only screen and (min-width: 750px) {
+    .page-gutter {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.main-content {
+    position: relative;
+}
+
+.main-content--no-template {
+    padding-top: 50px;
+}
+
+.page-width--wide {
+    max-width: 1200px;
+}
+
+hr {
+    margin-bottom: 60px;
+}
+
+hr.hr--clear {
+    border: 0 none;
+    height: 1px;
+    margin-top: -1px;
+}
+
+.page-content__content {
+    margin: 0 10%;
+}
+
+
+/*================ Page template ================*/
+
+.page-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 750px) {
+    .page-container {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+}
+
+
+/*================ Headings ================*/
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: "Archivo Narrow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    margin: 0 0 0.58824em;
+    line-height: 1.4;
+    color: #1a1a1a;
+}
+
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a,
+h6 a,
+.h6 a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: inherit;
+}
+
+h1,
+.h1 {
+    font-size: 1.64706em;
+}
+
+h2,
+.h2 {
+    font-size: 1.35294em;
+}
+
+h3,
+.h3 {
+    font-size: 1.11765em;
+}
+
+h4,
+.h4 {
+    font-size: 0.94118em;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+    font-size: 0.82353em;
+}
+
+
+/*================ Paragraph styles ================*/
+
+p {
+    margin: 0 0 20px;
+}
+
+.txt--minor {
+    font-size: 80%;
+}
+
+.txt--emphasis {
+    font-style: italic;
+}
