@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>zGowie Creations⇀ Home </title>
+    <title>zGowie ⇀ Home </title>
 
     <meta name="description" content="zGowie Creations">
 
@@ -22,268 +22,238 @@
     <meta name="twitter:title" content="zGowie Creations">
     <meta name="twitter:description" content="zGowie Creations">
 
+    <link rel="shortcut icon" href="./assets/img/zgowie/logo-zgow.png">
+
     <!-- css assets -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/splash.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/common.css" />
 
 
 </head>
 
-<body class="template-index">
+<body class="fp-viewing-top" style="overflow: hidden; height: 100%;">
 
-    <div id="PageContainer">
-
-        <div class="loader loader_overlay"></div>
-
-        <!-- ======== MENU ======== -->
-        <nav class="menu">
-            <div class="menu-toggle">
-                <button class="btn btn_menu" aria-label="menu" data-cursor="-menu" data-cursor-stick=".btn_menu-box">
-            <span class="btn_menu-title" style="visibility:hidden;">menu</span>
-            <span class="btn_menu-box" data-magnetic="{&quot;x&quot;:&quot;0.08&quot;,&quot;y&quot;:&quot;0.08&quot;}">
-                <span></span>
-                <span></span>
-            </span>
-            </button>
+    <!-- ======== HEADER ======== -->
+    <header>
+        <a class="name" href="./">zGowieCreations
+            <!--<img class="logo" src="./assets/img/zgowie/logo-zgow.png"> -->
+        </a>
+        <div class="wrap">
+            <div class="icons">
+                <a href="https://github.com/thomazgg" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://discord.gg/DJuK4KGa94" target="_blank"><i class="fab fa-discord"></i></a>
             </div>
-            <div class="menu-box">
-                <div class="menu-backdrop" style="opacity: 0;"></div>
-                <div class="menu-content" style="transform: translate(100%, 0px); background-color: rgb(239, 239, 239);">
-                    <div class="menu-body" style="opacity: 0; transform: translate(-35%, 0px);">
-                        <div class="menu-container">
-                            <div class="menu-grid">
-                                <div class="menu-grid-col -left">
-                                    <div class="menu-title">Social</div>
-                                    <div class="menu-social" data-cursor="-opaque">
-                                        <a class="menu-social-item" href="https://github.com/thomazgg" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="GitHub">GitHub</span></em></a>
-                                        <a class="menu-social-item" href="https://www.behance.net/uthomaz" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="Behance">Behance</span></em></a>
-                                        <a class="menu-social-item" href="https://dribbble.com/uthomaz" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="Dribbble">Dribbble</span></em></a>
-                                        <a class="menu-social-item" href="https://instagram.com/uthomaz" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="Instagram">Instagram</span></em></a>
-                                        <a class="menu-social-item" href="https://discord.gg/DJuK4KGa94" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="Discord">Discord</span></em></a>
-                                        <a class="menu-social-item" href="https://twitch.tv/uthomaz" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="Twitch">Twitch</span></em></a>
-                                        <a class="menu-social-item" href="https://twitter.com/thomazvfx" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="Twitter">Twitter</span></em></a>
-                                        <a class="menu-social-item" href="https://youtube.com/c/uthomaz" target="_blank" rel="noopener" data-magnetic=""><em><span data-text="YouTube">YouTube</span></em></a>
-                                    </div>
-                                </div>
-                                <div class="menu-grid-col -right">
-                                    <div class="menu-title">Menu</div>
-                                    <div class="menu-nav" role="navigation" data-cursor="-opaque">
-                                        <!-- 
-                                    <div class="menu-nav-item -active"><a href="/index.html" data-magnetic><em><span data-text="Home">Home</span></em></a></div> 
-                                    -->
-                                        <div class="menu-nav-item"><a href="/index.html" data-magnetic=""><em><span data-text="Home">Home</span></em></a></div>
-                                        <div class="menu-nav-item"><a href="/about.html" data-magnetic=""><em><span data-text="About">About</span></em></a></div>
-                                        <div class="menu-nav-item"><a href="/projects.html" data-magnetic=""><em><span data-text="Projects">Projects</span></em></a></div>
-                                        <div class="menu-nav-item"><a href="/contact.html" data-magnetic=""><em><span data-text="Contact">Contact</span></em></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-footer" style="opacity: 0; transform: translate(-35%, 0px);">
-                        <div class="menu-container">
-                            <div class="menu-title -sm">Get in Touch</div>
-                            <div class="menu-mail"><a href="mailto:uthomaz7@gmail.com"><span>uthomaz7@gmail.com</span></a></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="menu">
+                <div class="menuIcon js-menuBtn"></div>
             </div>
+        </div>
+        <nav class="global-nav">
+            <ul class="global-nav__list">
+                <li><a href="./about.html">ABOUT ME</a></li>
+                <li><a href="./projects.html">PROJECTS</a></li>
+                <li><a class="js-contact" href="./#contact">CONTACT</a></li>
+                <li class="global-nav__sns">
+                    <a href="https://twitter.com/Goldi69s" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://dribbble.com/kuon_yagi" target="_blank">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+            </ul>
         </nav>
+        <div class="curtain"></div>
+        <div class="loader .js-hidden" style="transform: translateY(-100%) translateZ(0px);"></div>
+    </header>
 
-        <main class="main-content" role="main">
+    <!-- ======== MAIN ======== -->
 
-            <div class="bg"></div>
-
-            <!-- ======== NAVBAR ======== -->
-
-            <div class="navbar">
-                <div class="navbar-strip">
-                    <div class="navbar-grid">
-                        <div class="navbar-grid-col -left">
-                            <div class="navbar-logo">
-                                <a href="/" data-magnetic="">
-                                    <svg class="svgsprite -logo" width="350" height="350" viewBox="0 0 512 512">
-                                    <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                                    <path d="M1460 1595 l0 -465 154 0 155 0 3 193 c3 181 4 194 26 224 35 50 103
-                                    77 192 78 87 0 131 -20 167 -75 22 -31 23 -42 23 -226 l0 -194 155 0 155 0 0
-                                    242 c0 275 -5 296 -83 363 -70 60 -134 79 -272 79 -143 1 -216 -17 -306 -75
-                                    l-59 -39 0 180 0 180 -155 0 -155 0 0 -465z"></path>
-                                    <path d="M880 1905 l0 -95 -70 0 -70 0 0 -95 0 -95 70 0 70 0 0 -178 c0 -165
-                                    2 -181 23 -222 38 -75 64 -84 260 -88 l167 -4 0 96 0 96 -59 0 c-88 0 -91 5
-                                    -91 166 l0 134 75 0 76 0 -3 93 -3 92 -72 3 -73 3 0 94 0 95 -150 0 -150 0 0
-                                    -95z"></path>
-                                    <path d="M5630 1763 l0 -81 1098 -6 c603 -3 1113 -10 1132 -14 38 -8 52 -39
-                                    28 -59 -9 -8 -341 -16 -1013 -27 -1071 -17 -1091 -18 -1166 -69 -54 -37 -73
-                                    -71 -77 -140 -8 -131 73 -214 231 -236 68 -10 1559 5 1799 17 141 8 148 9 197
-                                    40 l52 32 9 -24 c18 -49 43 -56 193 -56 l138 0 -3 93 -3 92 -32 3 -31 3 -4
-                                    177 c-3 201 -12 228 -86 270 -91 51 -85 50 -1314 58 l-1148 7 0 -80z m2270
-                                    -333 c0 -20 -11 -42 -33 -66 -32 -36 -36 -37 -129 -45 -137 -11 -872 -28
-                                    -1365 -31 l-421 -3 -26 24 c-34 32 -33 66 1 88 21 14 53 19 148 21 161 5 1627
-                                    39 1738 41 l87 1 0 -30z"></path>
-                                    <path d="M2931 1820 c-157 -33 -247 -90 -299 -190 -33 -63 -34 -68 -30 -160 3
-                                    -73 9 -105 27 -138 47 -91 140 -154 278 -189 98 -25 448 -25 547 0 91 23 179
-                                    71 221 120 60 70 85 184 65 291 -23 124 -94 196 -239 244 -71 24 -91 26 -301
-                                    28 -124 2 -245 -1 -269 -6z m376 -185 c35 -11 62 -27 87 -55 33 -37 36 -45 36
-                                    -101 0 -59 -2 -63 -43 -104 -55 -56 -102 -68 -237 -63 -89 3 -112 7 -150 28
-                                    -113 63 -119 210 -11 274 18 10 47 22 64 26 57 14 201 11 254 -5z"></path>
-                                    <path d="M4405 1816 c-5 -3 -35 -11 -65 -20 -31 -8 -84 -33 -117 -55 l-62 -40
-                                    -3 52 -3 52 -150 0 -150 0 0 -335 0 -335 153 -3 152 -3 0 178 c0 207 10 243
-                                    79 288 80 54 224 41 268 -23 15 -23 19 -55 23 -232 l5 -205 152 -3 151 -3 4
-                                    188 c3 178 4 190 27 227 36 57 113 90 196 84 65 -6 107 -26 128 -62 8 -14 14
-                                    -93 17 -226 l5 -205 155 0 155 0 0 240 -1 240 -26 51 c-55 104 -158 154 -317
-                                    154 -134 0 -265 -41 -350 -108 l-24 -19 -29 33 c-16 18 -54 45 -85 61 -49 23
-                                    -70 27 -167 30 -61 1 -115 1 -121 -1z"></path>
-                                    <path d="M8340 1710 l0 -90 243 -2 242 -3 -242 -160 -243 -160 0 -82 0 -83
-                                    460 0 460 0 0 95 0 95 -251 2 -252 3 252 159 251 159 0 78 0 79 -460 0 -460 0
-                                    0 -90z"></path>
-                                    </g>
-                                    </svg>
-                                </a>
-
+    <main id="barba-wrapper" aria-live="polite">
+        <div class="barba-container" data-namespace="top">
+            <div class="fullpage fullpage-wrapper" id="js-fullpage" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px);">
+                <div class="section fp-section active fp-table fp-completely fp-section-1" data-anchor="top" style="height: 1008px;">
+                    <div class="fp-tableCell" style="height:1008px;">
+                        <div class="fullpage__slide">
+                            <div class="title title--top">
+                                <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">zGowie</h1>
+                                <div class="border js-letter" style="transform: translateX(0%) translateZ(0px);"><span></span><span class="js-letter" style="transform: translateX(0%) translateZ(0px);"></span></div>
+                                <p class="title__lead js-letter" style="transform: translateX(0%) translateZ(0px);">I create wonderful websites<br>that make the internet look great</p>
+                                <div class="btn-wrap js-letter" style="transform: translateX(0%) translateZ(0px);"><a class="btn" href="#about">Explorar</a></div>
                             </div>
-                        </div>
-
-                        <div class="navbar-grid-col -right" data-cursor="-opaque">
-                            <div class="navbar-about"><a class="btn btn_nav" href="./about.html" data-magnetic=""><span>about</span></a></div>
-                            <div class="navbar-projects"><a class="btn btn_nav" href="./projects.html" data-magnetic=""><span>projects</span></a></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- ======== HEADER ======== -->
-
-            <header class="hero">
-                <div class="hero-content">
-                    <div class="hero-body">
-                        <div class="hero-container">
-                            <div class="hero-grid">
-                                <div class="hero-grid-col -left">
-                                    <div class="hero-video"><video preload="auto" loop="" muted="" autoplay="" playsinline=""><source src="./assets/video/showreel/dreams.mp4" type="video/mp4"></video></div>
-                                </div>
-                                <div class="hero-grid-col -right">
-                                    <div class="hero-nav">
-                                        <div class="hero-nav-item" data-video-src="./assets/video/video.mp4">
-                                            <div class="hero-nav-item-spacer"></div><a href="./projects.html"><span class="-wd">web designer</span></a></div>
-                                        <div class="hero-nav-item" data-video-src="./assets/video/video0.mov">
-                                            <div class="hero-nav-item-spacer"></div><a href="https://www.tiktok.com/@uthomaz" target="_blank"><span class="-lg">&amp; content creator /</span><span class="-sm">content creator</span></a></div>
-                                        <div class="hero-nav-item" data-video-src="./assets/video/showreel/dreams.mp4">
-                                            <div class="hero-nav-item-spacer"></div><a href="https://www.youtube.com/c/uthomaz" target="_blank"><span class="-ve">video editor</span></a></div>
+                            <div class="moon">
+                                <div class="moon__img js-parallax-moon" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+                                    <div class="moon__front layer" data-depth="0.2" style="transform: translate3d(-5.3px, 2.2px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                                        <div class="moon__text-wrap">
+                                            <p class="moon__text js-moon" data-depth="0.5" style="opacity: 1; transform: translateX(0%) translateZ(0px);">ポートフォリオ</p>
+                                        </div>
+                                    </div>
+                                    <div class="moon__front layer" data-depth="0.8" style="transform: translate3d(-21.2px, 8.9px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+                                        <div class="cloud cloud--front1 js-moon" style="opacity: 1; transform: translateX(0%) translateZ(0px);"><img src="./assets/img/header/dog.png" alt="cloud"></div>
+                                    </div>
+                                    <div class="moon__back layer" data-depth="0.4" style="transform: translate3d(-10.6px, 4.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+                                        <div class="cloud cloud--back2 js-moon" style="opacity: 1; transform: translateX(0%) translateZ(0px);"><img src="./assets/img/header/rocket.svg" alt="cloud"></div>
+                                    </div>
+                                    <div class="moon__front layer" data-depth="0.6" style="transform: translate3d(-15.9px, 6.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+                                        <div class="cloud cloud--front2 js-moon" style="opacity: 1; transform: translateX(0%) translateZ(0px);"><img src="./assets/img/header/astronaut.svg" alt="cloud"></div>
+                                    </div>
+                                    <div class="moon__back layer" data-depth="0.5" style="transform: translate3d(-13.3px, 5.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+                                        <img class="js-moon" src="./assets/img/header/earth.svg" alt="moon" style="opacity: 1; transform: translateX(0%) translateZ(0px);"></div>
+                                    <div class="moon__front layer" data-depth="0.7" style="transform: translate3d(-18.6px, 7.8px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+                                        <div class="cloud cloud--front3 js-moon" style="opacity: 1; transform: translateX(0%) translateZ(0px);"><img src="./assets/img/header/comet.png" alt="cloud "></div>
+                                    </div>
+                                    <div class="moon__back layer " data-depth="0.3 " style="transform: translate3d(-8px, 3.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px; ">
+                                        <div class="cloud cloud--back1 js-moon " style="opacity: 1; transform: translateX(0%) translateZ(0px); "><img src="./assets/img/header/moon.svg " alt="cloud "></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
 
-            <!-- ======== BEGIN content_for_index ======== -->
-
-            <div class="section split">
-                <div class="demo-3 loading">
-                    <div>
-
-                        <div class="content">
-                            <div class="fold-content base-content">
-
-                                <!-- CONTENT INSIDE HERE -->
-                                <div class="content__type">
-                                    <p>Let&#x27;s talk</p>
-                                    <p>handmade</p>
-                                    <p>Australian Rye</p>
-                                    <p>vodka.</p>
-                                </div>
-
-                            </div>
-                            <div class="screen fold-wrapper"></div>
-                            <button class="btn-debug btn-debug">See Planes</button>
-                        </div>
-
+            </div>
+            <p class="scrollDown ">SCROLLDOWN</p>
+            <div class="moon-background ">
+                <div class="moonlight ">
+                    <div class="moonlight__wrap js-parallax-moonlight " style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; position: relative; pointer-events: none; ">
+                        <div class="layer moonlight__img " data-depth="0.2 " style="transform: translate3d(-13.5px, 5.6px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px; "></div>
                     </div>
                 </div>
             </div>
-
-            <div class="section split split-image">
-                <div class="demo-3 loading">
-                    <div>
-
-                        <div class="content">
-                            <div class="fold-content base-content">
-
-                                <!-- CONTENT INSIDE HERE -->
-                                <div class="content__type">
-                                    <img src="./assets/img/LOGO.jpg" alt="" />
-                                </div>
-
-                            </div>
-                            <div class="screen fold-wrapper"></div>
-                            <button class="btn-debug btn-debug">See Planes</button>
-                        </div>
-
-                    </div>
+            <div class="star js-parallax-star " style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none; ">
+                <div class="layer " data-depth="0.1 " style="transform: translate3d(-6.7px, 4.2px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px; ">
+                    <div class="star__img "><img src="./assets/img/header/star.svg "></div>
                 </div>
             </div>
+            <div class="sky-color "></div>
+        </div>
+    </main>
 
-            <div class="section split split-image">
-                <div class="demo-3 loading">
-                    <div>
+    <!-- ======== BEGIN content_for_index ======== -->
 
-                        <div class="content">
-                            <div class="fold-content base-content">
+    <div>
 
-                                <!-- CONTENT INSIDE HERE -->
-                                <div class="content__type">
-                                    <img src="./assets/img/THE CREATION.png" alt="" />
-                                </div>
+        <div class="section split " data-cursor="-inverse ">
+            <div class="demo-3 loading ">
+                <div>
 
+                    <div class="content ">
+                        <div class="fold-content base-content ">
+
+                            <!-- CONTENT INSIDE HERE -->
+                            <div class="content__type ">
+                                <p>Let&#x27;s talk</p>
+                                <p>handmade</p>
+                                <p>Australian Rye</p>
+                                <p>vodka.</p>
                             </div>
-                            <div class="screen fold-wrapper"></div>
-                            <button class="btn-debug btn-debug">See Planes</button>
-                        </div>
 
+                        </div>
+                        <div class="screen fold-wrapper "></div>
+                        <button class="btn-debug btn-debug ">See Planes</button>
                     </div>
+
                 </div>
             </div>
+        </div>
 
-            <div class="section">
-                <!-- CONTENT INSIDE HERE -->
-            </div>
+        <div class="section split split-image " data-cursor="-inverse ">
+            <div class="demo-3 loading ">
+                <div>
 
-            <div class="section split">
-                <div class="demo-3 loading">
-                    <div>
+                    <div class="content ">
+                        <div class="fold-content base-content ">
 
-                        <div class="content">
-                            <div class="fold-content base-content">
-
-                                <!-- CONTENT INSIDE HERE -->
-                                <div class="content__type">
-                                    <p>The idle hour.</p>
-                                    <p>Made here.</p>
-                                    <p>Enjoyed Here.</p>
-                                    <p>Ready when</p>
-                                    <p>you are.</p>
-                                </div>
-
+                            <!-- CONTENT INSIDE HERE -->
+                            <div class="content__type ">
+                                <img src="./assets/img/zgowie/zgowie1.jpg " alt=" " />
                             </div>
-                            <div class="screen fold-wrapper"></div>
-                            <button class="btn-debug btn-debug"></button>
-                        </div>
 
+                        </div>
+                        <div class="screen fold-wrapper "></div>
+                        <button class="btn-debug btn-debug ">See Planes</button>
                     </div>
+
                 </div>
             </div>
+        </div>
 
-            <!-- Split assets -->
-            <script src="http://www.idlehourvodka.com/js/imagesloaded.pkgd.min.js"></script>
+        <div class="section split split-image " data-cursor="-inverse ">
+            <div class="demo-3 loading ">
+                <div>
 
-            <!--     <script src="http://www.idlehourvodka.com/js/split.js"></script> -->
-            <script src="//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/split.js?v=19904757779783895271606988922"></script>
+                    <div class="content ">
+                        <div class="fold-content base-content ">
 
-            <script src="./assets/js/bundle.js" defer></script>
-        </main>
+                            <!-- CONTENT INSIDE HERE -->
+                            <div class="content__type ">
+                                <img src="./assets/img/zgowie/zgowie2.jpg " alt=" " />
+                            </div>
+
+                        </div>
+                        <div class="screen fold-wrapper "></div>
+                        <button class="btn-debug btn-debug ">See Planes</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section " data-cursor="-inverse ">
+            <!-- CONTENT INSIDE HERE -->
+        </div>
+
+        <div class="section split " data-cursor="-inverse ">
+            <div class="demo-3 loading ">
+                <div>
+
+                    <div class="content ">
+                        <div class="fold-content base-content ">
+
+                            <!-- CONTENT INSIDE HERE -->
+                            <div class="content__type ">
+                                <p>The idle hour.</p>
+                                <p>Made here.</p>
+                                <p>Enjoyed Here.</p>
+                                <p>Ready when</p>
+                                <p>you are.</p>
+                            </div>
+
+                        </div>
+                        <div class="screen fold-wrapper "></div>
+                        <button class="btn-debug btn-debug "></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="fp-nav" class="left">
+        <ul>
+            <li><a href="#top" class="active"><span></span></a></li>
+            <li><a href="#about"><span></span></a></li>
+            <li><a href="#projects"><span></span></a></li>
+            <li><a href="#contact"><span></span></a></li>
+        </ul>
+    </div>
+
+    <!-- Split assets -->
+    <script src="http://www.idlehourvodka.com/js/imagesloaded.pkgd.min.js "></script>
+
+    <!--<script src="http://www.idlehourvodka.com/js/split.js "></script> -->
+    <script src="//cdn.shopify.com/s/files/1/0282/1629/5512/t/2/assets/split.js?v=19904757779783895271606988922 "></script>
+    <script src="./assets/js/main.js "></script>
+    <script src="./assets/js/parallax.js "></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script src="./assets/js/parallax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
 </body>
 
 </html>
