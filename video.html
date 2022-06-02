@@ -3,33 +3,21 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>zGowie ⇀ Videos</title>
+    <title>zGowie ⇀ Home</title>
 
-    <meta name="description" content="zGowie Creations">
-
-    <!-- social-meta-tags -->
-
-    <meta property="og:site_name" content="zGowie Creations">
-    <meta property="og:url" content="https://www.zgowie.com/">
-    <meta property="og:title" content="zGowie Creations">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="zGowie Creations">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="zGowie Creations">
-    <meta name="twitter:description" content="zGowie Creations">
-
-    <link rel="shortcut icon" href="./assets/img/zgowie/logo-zgow.png">
+    <base></base>
 
     <!-- css assets -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
     <link rel="stylesheet" type="text/css" href="./assets/css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/common.css" />
-    <link rel="stylesheet" href="./assets/css/projects.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/projects.css">
+
+    <!-- preload -->
+    <link rel="preload" href="./assets/js/jquery.fullPage.js" as="script">
+    <link rel="preload" href="./assets/js/common.min.js" as="script">
+    <link rel="preload" href="./assets/js/luxy.js" as="script">
 
 </head>
 
@@ -111,38 +99,43 @@
     </main>
 
     <!-- ======== JS ======== -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
+    <section>
+        <!-- Index JS file -->
+        <script src="./assets/js/index.js"></script>
 
-    <script src="./assets/js/jquery.fullPage.js"></script>
-    <script src="./assets/js/common.min.js"></script>
-    <script>
-        let sideBar = document.querySelector('.container .side-bar');
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
 
-        /* document.querySelector('#menu-btn').onclick = () => {
-            sideBar.classList.toggle('active');
-        }; */
+        <script src="./assets/js/jquery.fullPage.js"></script>
+        <script src="./assets/js/common.min.js"></script>
 
-        let video = document.querySelector('.container .video-container iframe');
-        let videoLinks = document.querySelectorAll('.container .side-bar .list li');
+        <div class="dont-open"></div>
 
-        videoLinks.forEach(link => {
-            link.onclick = () => {
-                let src = link.getAttribute('data-src');
-                video.src = src;
-                sideBar.classList.remove('active');
-                videoLinks.forEach(remove => {
-                    remove.classList.remove('active')
-                });
-                link.classList.add('active');
-            }
-        })
-    </script>
+        <script>
+            let sideBar = document.querySelector('.container .side-bar');
 
-    <noscript>
-        Parabéns Viajante do Tempo, você está nos anos 90. Agora, para acessar este site, você precisa
-        atualize seu navegador ou habilite o Javascript nas configurações. E por favor não use o Internet Explorer :).
-    </noscript>
+            /* document.querySelector('#menu-btn').onclick = () => {
+                sideBar.classList.toggle('active');
+            }; */
+
+            let video = document.querySelector('.container .video-container iframe');
+            let videoLinks = document.querySelectorAll('.container .side-bar .list li');
+
+            videoLinks.forEach(link => {
+                link.onclick = () => {
+                    let src = link.getAttribute('data-src');
+                    video.src = src;
+                    sideBar.classList.remove('active');
+                    videoLinks.forEach(remove => {
+                        remove.classList.remove('active')
+                    });
+                    link.classList.add('active');
+                }
+            })
+        </script>
+
+        <div class="dont-open"></div>
+    </section>
 </body>
 
 </html>
