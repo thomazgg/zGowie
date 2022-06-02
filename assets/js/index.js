@@ -23,7 +23,7 @@ function togglePlay() {
     );
 };
 
-/* ================= _includes =================*/
+/* ================= _includes =================
 
 fetch("./assets/_includes/description.html")
     .then(response => {
@@ -33,13 +33,13 @@ fetch("./assets/_includes/description.html")
         document.querySelector("base").innerHTML = data;
     });
 
-/* fetch("./assets/_includes/header.html")
+fetch("./assets/_includes/header.html")
     .then(response => {
         return response.text()
     })
     .then(data => {
         document.querySelector(".header").innerHTML = data;
-    }); */
+    }); 
 
 fetch("./assets/_includes/music.html")
     .then(response => {
@@ -64,3 +64,5 @@ fetch("./assets/_includes/dont-open.html")
     .then(data => {
         document.querySelector(".dont-open").innerHTML = data;
     });
+
+*/
