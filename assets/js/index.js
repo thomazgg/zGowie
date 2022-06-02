@@ -23,9 +23,9 @@ function togglePlay() {
     );
 };
 
-/* ================= _includes =================
+/* ================= _includes =================*/
 
-fetch("./assets/_includes/description.html")
+fetch("./assets/_includes/description.txt")
     .then(response => {
         return response.text()
     })
@@ -33,15 +33,15 @@ fetch("./assets/_includes/description.html")
         document.querySelector("base").innerHTML = data;
     });
 
-fetch("./assets/_includes/header.html")
+/* fetch("./assets/_includes/header.txt")
     .then(response => {
         return response.text()
     })
     .then(data => {
         document.querySelector(".header").innerHTML = data;
-    }); 
+    }); */
 
-fetch("./assets/_includes/music.html")
+fetch("./assets/_includes/music.txt")
     .then(response => {
         return response.text()
     })
@@ -49,20 +49,10 @@ fetch("./assets/_includes/music.html")
         document.querySelector(".music").innerHTML = data;
     });
 
-fetch("./assets/_includes/contact.html")
-    .then(response => {
-        return response.text()
-    })
-    .then(data => {
-        document.querySelector(".con").innerHTML = data;
-    });
-
-fetch("./assets/_includes/dont-open.html")
+fetch("./assets/_includes/dont-open.txt")
     .then(response => {
         return response.text()
     })
     .then(data => {
         document.querySelector(".dont-open").innerHTML = data;
     });
-
-*/
