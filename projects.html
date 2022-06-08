@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="pt">
 
 <head>
 
@@ -78,8 +78,8 @@
                 <nav>
                     <ul>
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="./projects.html">Flyers</a></li>
-                        <li><a href="./videos.html">Videos</a></li>
+                        <li><a href="./projects.html">Projetos</a></li>
+                        <li><a href="./index.html#two">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -87,7 +87,7 @@
         <div class="social-header">
             <ul>
                 <li><a href="https://instagram.com/zgowiecre" target="_blank"><i class="fab fa-instagram" alt="instagram"></i></a></li>
-                <li><a href="https://instagram.com/zgowiecre" target="_blank"><i class="fab fa-behance" alt="behance"></i></a></li>
+                <li><a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a></li>
                 <li><a href="https://instagram.com/zgowiecre" target="_blank"><i class="fab fa-twitter" alt="twitter"></i></a></li>
             </ul>
         </div>
@@ -97,15 +97,14 @@
         <nav class="global-nav">
             <ul class="global-nav__list">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./projects.html">Flyers</a></li>
-                <li><a href="./videos.html">Videos</a></li>
-                <li><a href="./contact.html">Contato</a></li>
+                <li><a href="./projects.html">Projetos</a></li>
+                <li><a href="./index.html#two">Contato</a></li>
                 <li class="global-nav__sns">
                     <a href="https://instagram.com/zgowiecre" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://instagram.com/zgowiecre" target="_blank">
-                        <i class="fab fa-behance"></i>
+                    <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp" alt="whatsapp"></i>
                     </a>
                     <a href="https://instagram.com/zgowiecre" target="_blank">
                         <i class="fab fa-twitter"></i>
@@ -136,10 +135,10 @@
                         </svg>
                     </a>
                     <div class="title">
-                        <h2 class="title__text">Flyers</h2>
+                        <h2 class="title__text">Projetos</h2>
                         <div class="border js-toRight"><span></span><span></span></div>
                         <!--<p class="title__lead"></p> -->
-                        <div class="btn-wrap"><a class="button" href="./projects.html">Explorar</a></div>
+                        <div class="btn-wrap"><a class="button" href="#down">Explorar</a></div>
                     </div>
                     <div class="image image__projects">
                     </div>
@@ -149,7 +148,7 @@
 
             <!--PORTFOLIO-->
 
-            <div class="bnr col-12">
+            <div class="bnr col-12" id="down">
                 <div class="bnr_t">
 
                     <div class="no-out" style="z-index: 1">
@@ -191,10 +190,50 @@
 
             <section class="wrapper" id="01">
 
-                <div class="wrk">
-                    <div class="text">
-                        <p class="heading-num">01</p>
+                <div class="text">
+                    <p class="heading-num">01</p>
+                </div>
+
+                <div class="container">
+
+                    <a class="back-arrow" onclick="history.back()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="34" viewBox="0 0 67 34">
+                            <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" transform="translate(2 1)">
+                            <path stroke-width="2" d="M0,15.5533333 L64,15.5533333"></path>
+                            <polyline stroke-width="2" points="15.556 0 0 15.556 15.556 31.111"></polyline>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <div class="video-container">
+                        <!-- <iframe src="link" loop muted autoplay controls frameborder="0" allowfullscreen></iframe> -->
                     </div>
+
+                    <div class="side-bar" id="outerDiv">
+
+                        <ul class="list" id="scrollableContent">
+                            <li id="first" data-src="xTl5S38oOUQ?start=175">PIRADOS do CARIBE no Sea of Thieves</li>
+                            <li data-src="5kmetXU2EJ4?start=494">APRENDI com o GAMES EDUUU no Assassins Creed Valhala</li>
+                            <li data-src="_TwNkaRpYfs?start=3">MEUS AMIGOS GRITAM MAIS que os ZUMBIS no Back 4 Blood</li>
+                            <li data-src="EBZmE6wpyhQ?start=253">O NATAL JÁ CHEGOU!? no Rubber Bandits</li>
+                            <li data-src="yvHncvee7D8?start=300">1 FNAF DOOM e 3 AMIGOS (+16)</li>
+                            <li data-src="4ruzf1JBs8Q?start=170">PROCURADOS 5 ESTRELAS no Red Dead Redemption 2</li>
+                            <li data-src="-JEBhjepv2o?start=205">NOVO JOGO DO 007 ?</li>
+                            <!--<li data-src="id">Nome</li> -->
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <section class="wrapper" id="02">
+
+                <div class="text">
+                    <p class="heading-num">02</p>
+                </div>
+
+                <div class="wrk">
                     <div class="wrk_t">
                         <p class="-row" style="margin-top: 12px;">
                             <span style="transition-delay: .8s">PROJETOS EM DESTAQUE</span>
@@ -326,12 +365,16 @@
 
             <!--CONTACT-->
 
-            <section class="wrapper" id="02">
+            <section class="wrapper" id="03">
+
+                <div class="text">
+                    <p class="heading-num">03</p>
+                </div>
 
                 <div class="con flex">
                     <div class="-row icons2">
                         <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-behance"></i></a>
+                        <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
                         <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                     <div class="con_t">
@@ -352,12 +395,12 @@
                     <div class="con_p">
                         <div class="-row icons">
                             <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-behance"></i></a>
+                            <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
                             <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-twitter"></i></a>
                         </div>
                         <p class="delay">
                         </p><br>
-                        <a href="mailto:zgowie@gmail.com?subject=Lets%20Work%20Together" class="-btn" title="I usually respond in a day.">
+                        <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank" class="-btn">
                             <p>
                                 <span class="-row">
                             <span >Entrar em contato</span>
@@ -380,7 +423,7 @@
 
             </section>
 
-            <div class="back-btn-wrap"><a class="back-btn" href="./#about">BACK</a></div>
+            <div class="back-btn-wrap"><a class="back-btn" href="./#about">VOLTAR</a></div>
 
         </div>
 
@@ -406,6 +449,7 @@
     <section>
         <!-- Index JS file -->
         <script src="./assets/js/index.js"></script>
+        <script type="module" src="./assets/js/api.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
@@ -496,6 +540,12 @@
                     }
                 }
             };
+        </script>
+
+        <script>
+            setTimeout(function() {
+                document.getElementById('first').click();
+            }, 500);
         </script>
 
         <noscript>
