@@ -1,0 +1,10 @@
+<div class="music">
+    <button class="music-button paused" id="btn" onClick="togglePlay(); buttonClick();">
+                <span class="gauge">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="text" id="text">O Som está desligado</span>
+            </button>
+</div>
