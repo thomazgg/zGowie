@@ -40,15 +40,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
     <link rel="stylesheet" type="text/css" href="./assets/css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/projects.css">
 
     <!-- preload -->
     <link rel="preload" href="./assets/js/jquery.fullPage.js" as="script">
     <link rel="preload" href="./assets/js/common.min.js" as="script">
-    <link rel="preload" href="./assets/js/luxy.js" as="script">
-    <link rel="preload" href="./assets/js/luxy.js" as="script">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!--     
     <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-M9FDW7M"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -59,28 +58,27 @@
 
         gtag('js', new Date());
         gtag('config', 'GTM-M9FDW7M');
-    </script>
+    </script> -->
 
 </head>
 
-<body style="background: #181818; overflow: hidden; height: 100%;">
-
-    <div class="loading-container">
-        <div class="loading-screen">
-        </div>
-    </div>
+<body>
 
     <!-- ======== HEADER ======== -->
 
     <header>
         <div class="nav-container">
-            <a class="name" href="./">zGowieCreations<!--<img class="logo" src="./assets/img/zgowie/logo-zgow.png"> --></a>
+            <a class="name" href="./index.html#two">zGowieCreations<!--<img class="logo" src="./assets/img/zgowie/logo-zgow.png"> --></a>
             <div class="wrap">
                 <nav>
                     <ul>
-                        <li><a href="./index.html#top">Home</a></li>
-                        <li><a href="./projects.html">Projetos</a></li>
-                        <li><a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">Contato</a></li>
+                        <li><a href="./index.html#two"><span>Home</span></a></li>
+                        <li><a href="./projects.html"><span>Projetos</span></a></li>
+                        <li>
+                            <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">
+                                <span style="margin-right: .6em;">Contato</span><i class="fas fa-external-link-alt" style="display: contents; font-size: 1.2rem;"></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -97,15 +95,19 @@
         </div>
         <nav class="global-nav">
             <ul class="global-nav__list">
-                <li><a href="./index.html#top">Home</a></li>
+                <li><a href="./index.html#two">Home</a></li>
                 <li><a href="./projects.html">Projetos</a></li>
-                <li><a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">Contato</a></li>
+                <li>
+                    <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">
+                        <span>Contato</span> <i class="fas fa-external-link-alt" style="display: contents; font-size: 3.2rem;"></i>
+                    </a>
+                </li>
                 <li class="global-nav__sns">
                     <a href="https://instagram.com/zgowiecre" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">
-                        <i class="fab fa-whatsapp" alt="whatsapp"></i>
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://twitter.com/zgowiecre" target="_blank">
                         <i class="fab fa-twitter"></i>
@@ -114,358 +116,328 @@
             </ul>
         </nav>
 
-        <div class="loader .js-hidden" style="transform: translateY(-100%) translateZ(0px);"></div>
+        <!--         
+            <div class="curtain"></div>
+            <div class="loader .js-hidden" style="transform: translateY(0%) translateZ(0px);"></div> 
+        -->
+
     </header>
 
     <!-- ======== MAIN ======== -->
 
     <main id="barba-wrapper">
+        <div class="barba-container" data-namespace="underlayer">
 
-        <div id="luxy">
+            <div id="luxy" style="background: #181818">
 
-            <!--PAGE-TOP-->
+                <link rel="stylesheet" type="text/css" href="./assets/css/projects.css">
 
-            <div class="page-top">
-                <div class="page-top__inner">
-                    <a class="back-arrow" onclick="history.back()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="34" viewBox="0 0 67 34">
+                <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+                <!--PAGE-TOP-->
+
+                <div class="page-top">
+                    <div class="page-top__inner">
+                        <a class="back-arrow" href="./index.html#two">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="34" viewBox="0 0 67 34">
                             <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" transform="translate(2 1)">
                             <path stroke-width="2" d="M0,15.5533333 L64,15.5533333"></path>
                             <polyline stroke-width="2" points="15.556 0 0 15.556 15.556 31.111"></polyline>
                             </g>
                         </svg>
-                    </a>
-                    <div class="title">
-                        <h2 class="title__text">Projetos</h2>
-                        <div class="border js-toRight"><span></span><span></span></div>
-                        <!--<p class="title__lead"></p> -->
-                        <div class="btn-wrap"><a class="button" href="#down">Explorar</a></div>
-                    </div>
-                    <div class="image image__projects">
-                    </div>
-                    <p class="scrollDown2">SCROLLDOWN</p>
-                </div>
-            </div>
-
-            <!--PORTFOLIO-->
-
-            <div class="bnr col-12" id="down">
-                <div class="bnr_t">
-
-                    <div class="no-out" style="z-index: 1">
-                        <h1 class="luxy-el" data-horizontal="1" data-speed-x="-35" style="transform: translate3d(0px, 0px, 0px);">
-                            <span class="-row">
-                            <span  class="">portfolio portfolio portfolio</span>
-                            </span>
-                        </h1>
-                        <h1 class="le luxy-el" data-horizontal="1" data-speed-x="35" style="transform: translate3d(0px, 0px, 0px);">
-                            <span class="-row">
-                            <span  class="">portfolio portfolio portfolio</span>
-                            </span>
-                        </h1>
-                    </div>
-
-                    <div style="z-index: 2; margin-left: 30.3%; transform: translate3d(0px, -80px, 0px);" class="bnr_img luxy-el" data-speed-y="-19" data-offset="-80">
-                        <img id="imgb" src="./assets/img/other/projects.jpg">
-                        <div>
-                            <img id="imgc" src="" class="luxy-el" data-speed-y="15" style="transform: translate3d(0px, 0px, 0px);">
-                        </div>
-                    </div>
-
-                    <div style="z-index: 3;">
-                        <h1 class="luxy-el outline" data-horizontal="1" data-speed-x="-35" style="transform: translate3d(0px, 0px, 0px);">
-                            <span class="-row">
-                            <span  class="">portfolio portfolio portfolio</span>
-                            </span>
-                        </h1>
-                        <h1 class="le luxy-el outline" data-horizontal="1" data-speed-x="35" style="transform: translate3d(0px, 0px, 0px);">
-                            <span class="-row">
-                            <span  class="">portfolio portfolio portfolio</span>
-                            </span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <!--WORK-->
-
-            <section class="wrapper" id="01">
-
-                <div class="text">
-                    <p class="heading-num">01</p>
-                </div>
-
-                <div class="container">
-
-                    <div class="video-container">
-                        <!-- <iframe src="link" loop muted autoplay controls frameborder="0" allowfullscreen></iframe> -->
-                    </div>
-
-                    <div class="side-bar" id="outerDiv">
-
-                        <ul class="list" id="scrollableContent">
-                            <li id="first" data-src="xTl5S38oOUQ?start=175">PIRADOS do CARIBE no Sea of Thieves</li>
-                            <li data-src="5kmetXU2EJ4?start=494">APRENDI com o GAMES EDUUU no Assassins Creed Valhala</li>
-                            <li data-src="_TwNkaRpYfs?start=3">MEUS AMIGOS GRITAM MAIS que os ZUMBIS no Back 4 Blood</li>
-                            <li data-src="EBZmE6wpyhQ?start=253">O NATAL JÁ CHEGOU!? no Rubber Bandits</li>
-                            <li data-src="yvHncvee7D8?start=300">1 FNAF DOOM e 3 AMIGOS (+16)</li>
-                            <li data-src="4ruzf1JBs8Q?start=170">PROCURADOS 5 ESTRELAS no Red Dead Redemption 2</li>
-                            <li data-src="-JEBhjepv2o?start=205">NOVO JOGO DO 007 ?</li>
-                            <!--<li data-src="id">Nome</li> -->
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="wrapper" id="02">
-
-                <div class="text">
-                    <p class="heading-num">02</p>
-                </div>
-
-                <div class="wrk">
-                    <div class="wrk_t">
-                        <p class="-row" style="margin-top: 12px;">
-                            <span style="transition-delay: .8s">PROJETOS EM DESTAQUE</span>
-                        </p>
-                        <h1>
-                            <span class="-row">
-                            <span class="outline -o" >works</span>
-                            </span>
-                            <span class="-row">
-                            <span >works</span>
-                            </span>
-                            <span class="-row">
-                            <span class="outline -o" >works</span>
-                            </span>
-                        </h1>
-                    </div>
-
-                    <div class="wrk_s">
-                        <div class="wrk_e">
-                            <a target="_blank">
-                                <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
-                                    <img class="bg" src="./assets/img/zgowie/kick_star.jpg">
-                                </div>
-                            </a>
-                            <div class="w-txt">
-                                <p>01.</p>
-                                <div>
-                                    <p>Kick Star</p>
-                                    <span>Flyer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wrk_s flex jus margin1">
-                        <a target="_blank" class="prj_btn -btn">
-                            <p>
-                                <span class="-row">
-                            <span >Ver todos os projetos</span>
-                                </span>
-                            </p>
-                            <span class="-row">
-                        <span ><img src="./assets/img/other/seta.svg"></span>
-                            </span>
                         </a>
-                        <div class="wrk_e">
-                            <a target="_blank">
-                                <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
-                                    <img class="bg" src="./assets/img/zgowie/Atlas-titan.jpg">
-                                </div>
-                            </a>
-                            <div class="w-txt">
-                                <p>02.</p>
-                                <div>
-                                    <p>Atlas Rise / The god failed</p>
-                                    <span>Flyer</span>
-                                </div>
-                            </div>
+                        <div class="title">
+                            <h2 class="title__text">Projetos</h2>
+                            <div class="border js-toRight"><span></span><span></span></div>
+                            <!--<p class="title__lead"></p> -->
+                            <div class="btn-wrap"><a class="button" href="#down">Explorar</a></div>
                         </div>
+                        <div class="image image__projects">
+                        </div>
+                        <!--<p class="scrollDown2">SCROLLDOWN</p> -->
                     </div>
+                </div>
 
-                    <div class="wrk_s flex jus">
-                        <div class="wrk_e">
-                            <a target="_blank">
-                                <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
-                                    <img class="bg" src="./assets/img/zgowie/FEARS.jpg">
-                                </div>
-                            </a>
-                            <div class="w-txt">
-                                <p>03.</p>
-                                <div>
-                                    <p>FEARS</p>
-                                    <span>Flyer</span>
-                                </div>
+                <!--PORTFOLIO-->
+
+                <div class="bnr col-12" id="down">
+                    <div class="bnr_t">
+
+                        <div class="no-out" style="z-index: 1">
+                            <h1 id="h1" class="luxy-el" data-horizontal="1" data-speed-x="-35" style="transform: translate3d(0px, 0px, 0px);">
+                                <span class="-row">
+                            <span  class="">portfolio portfolio portfolio</span>
+                                </span>
+                            </h1>
+                            <h1 id="h1" class="le luxy-el" data-horizontal="1" data-speed-x="35" style="transform: translate3d(0px, 0px, 0px);">
+                                <span class="-row">
+                            <span  class="">portfolio portfolio portfolio</span>
+                                </span>
+                            </h1>
+                        </div>
+
+                        <div style="z-index: 2; margin-left: 30.3%; transform: translate3d(0px, -80px, 0px);" class="bnr_img luxy-el" data-speed-y="-19" data-offset="-80">
+                            <img id="imgb" src="./assets/img/other/projects.jpg">
+                            <div>
+                                <img id="imgc" src="" class="luxy-el" data-speed-y="15" style="transform: translate3d(0px, 0px, 0px);">
                             </div>
                         </div>
-                        <div class="wrk_e margin2">
-                            <a target="_blank">
-                                <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
-                                    <img class="bg" src="./assets/img/zgowie/demonfull.jpg">
-                                </div>
-                            </a>
-                            <div class="w-txt">
-                                <p>04.</p>
-                                <div>
-                                    <p>Halo on Fire!</p>
-                                    <span>Flyer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="wrk_s">
-                        <div class="wrk_e margin3">
-                            <a target="_blank">
-                                <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
-                                    <img class="bg" src="./assets/img/zgowie/THE CREATION.jpg">
-                                </div>
-                            </a>
-                            <div class="w-txt">
-                                <p>05.</p>
-                                <div>
-                                    <p>THE EARTH CREATION first contact</p>
-                                    <span>Flyer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wrk_s">
-                        <div class="wrk_e">
-                            <a target="_blank">
-                                <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
-                                    <img class="bg" src="./assets/img/zgowie/need_more_space.jpg">
-                                </div>
-                            </a>
-                            <div class="w-txt">
-                                <p>06.</p>
-                                <div>
-                                    <p>Need more space</p>
-                                    <span>Flyer</span>
-                                </div>
-                            </div>
+                        <div style="z-index: 3;">
+                            <h1 id="h1" class="luxy-el outline" data-horizontal="1" data-speed-x="-35" style="transform: translate3d(0px, 0px, 0px);">
+                                <span class="-row">
+                            <span  class="">portfolio portfolio portfolio</span>
+                                </span>
+                            </h1>
+                            <h1 id="h1" class="le luxy-el outline" data-horizontal="1" data-speed-x="35" style="transform: translate3d(0px, 0px, 0px);">
+                                <span class="-row">
+                            <span  class="">portfolio portfolio portfolio</span>
+                                </span>
+                            </h1>
                         </div>
                     </div>
                 </div>
 
-            </section>
+                <!--WORK-->
 
-            <!--CONTACT-->
+                <section class="wrapper" id="01">
 
-            <section class="wrapper" id="03">
+                    <div class="text">
+                        <p class="heading-num">01</p>
+                    </div>
 
-                <div class="text">
-                    <p class="heading-num">03</p>
-                </div>
+                    <div class="container">
 
-                <div class="wrk">
-                    <p class="-row" style="margin-top: 12px; text-transform: uppercase;">
-                        <span style="transition-delay: .8s">Já trabalhamos com</span>
-                    </p>
-                </div>
+                        <div class="video-container">
+                            <!-- <iframe src="link" loop muted autoplay controls frameborder="0" allowfullscreen></iframe> -->
+                        </div>
 
-                <div class="brands" style="margin-top: -10rem;">
-                    <div class="logo-slider">
+                        <div class="side-bar" id="outerDiv">
 
-                        <div>
-                            <img src="./assets/img/logos/baden-baden.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/cabanga.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/colina.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/chop_brasil.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/eisenbahn.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/ekos.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/fbm_boats.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/heineken.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/morena.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/nvidia.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/paraiso.png" />
-                        </div>
-                        <div>
-                            <img src="./assets/img/logos/refeno.png" />
+                            <ul class="list" id="scrollableContent">
+                                <li id="first" data-src="xTl5S38oOUQ?start=175">PIRADOS do CARIBE no Sea of Thieves</li>
+                                <li data-src="5kmetXU2EJ4?start=494">APRENDI com o GAMES EDUUU no Assassins Creed Valhala</li>
+                                <li data-src="_TwNkaRpYfs?start=3">MEUS AMIGOS GRITAM MAIS que os ZUMBIS no Back 4 Blood</li>
+                                <li data-src="EBZmE6wpyhQ?start=253">O NATAL JÁ CHEGOU!? no Rubber Bandits</li>
+                                <li data-src="yvHncvee7D8?start=300">1 FNAF DOOM e 3 AMIGOS (+16)</li>
+                                <li data-src="4ruzf1JBs8Q?start=170">PROCURADOS 5 ESTRELAS no Red Dead Redemption 2</li>
+                                <li data-src="-JEBhjepv2o?start=205">NOVO JOGO DO 007 ?</li>
+                                <!--<li data-src="id">Nome</li> -->
+                            </ul>
+
                         </div>
 
                     </div>
-                </div>
 
-                <div class="con flex">
-                    <div class="-row icons2">
-                        <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
-                        <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </section>
+
+                <section class="wrapper" id="02">
+
+                    <div class="text">
+                        <p class="heading-num">02</p>
                     </div>
-                    <div class="con_t">
-                        <h1 style="position: relative; z-index: 4;">
-                            <span class="-row">
-                        <span class="outline -o" >CONTATO</span>
-                            </span>
-                            <span class="-row">
-                        <span >CONTATO</span>
-                            </span>
-                        </h1>
-                        <h1>
-                            <span class="-row">
-                        <span class="outline -o" style="transition-delay: .5s" >CONTATO</span>
-                            </span>
-                        </h1>
+
+                    <div class="wrk">
+                        <div class="wrk_t">
+                            <p class="-row" style="margin-top: 12px;">
+                                <span style="transition-delay: .8s">PROJETOS EM DESTAQUE</span>
+                            </p>
+                            <h1 id="h1">
+                                <span class="-row">
+                                    <span class="outline -o" >works</span>
+                                </span>
+                                <span class="-row">
+                                    <span >works</span>
+                                </span>
+                                <span class="-row">
+                                    <span class="outline -o" >works</span>
+                                </span>
+                            </h1>
+                        </div>
+
+                        <div class="wrk_s">
+                            <div class="wrk_e">
+                                <a target="_blank">
+                                    <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
+                                        <img class="bg" src="./assets/img/zgowie/kick_star.jpg">
+                                    </div>
+                                </a>
+                                <div class="w-txt">
+                                    <p>01.</p>
+                                    <div>
+                                        <p>Kick Star</p>
+                                        <span>Flyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrk_s flex jus margin1">
+                            <a target="_blank" class="prj_btn -btn">
+                                <p>
+                                    <span class="-row">
+                            <span >Ver todos os projetos</span>
+                                    </span>
+                                </p>
+                                <span class="-row">
+                        <span ><img src="./assets/img/other/seta.svg"></span>
+                                </span>
+                            </a>
+                            <div class="wrk_e">
+                                <a target="_blank">
+                                    <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
+                                        <img class="bg" src="./assets/img/zgowie/Atlas-titan.jpg">
+                                    </div>
+                                </a>
+                                <div class="w-txt">
+                                    <p>02.</p>
+                                    <div>
+                                        <p>Atlas Rise / The god failed</p>
+                                        <span>Flyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrk_s flex jus">
+                            <div class="wrk_e">
+                                <a target="_blank">
+                                    <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
+                                        <img class="bg" src="./assets/img/zgowie/FEARS.jpg">
+                                    </div>
+                                </a>
+                                <div class="w-txt">
+                                    <p>03.</p>
+                                    <div>
+                                        <p>FEARS</p>
+                                        <span>Flyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrk_e margin2">
+                                <a target="_blank">
+                                    <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
+                                        <img class="bg" src="./assets/img/zgowie/demonfull.jpg">
+                                    </div>
+                                </a>
+                                <div class="w-txt">
+                                    <p>04.</p>
+                                    <div>
+                                        <p>Halo on Fire!</p>
+                                        <span>Flyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrk_s">
+                            <div class="wrk_e margin3">
+                                <a target="_blank">
+                                    <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
+                                        <img class="bg" src="./assets/img/zgowie/THE CREATION.jpg">
+                                    </div>
+                                </a>
+                                <div class="w-txt">
+                                    <p>05.</p>
+                                    <div>
+                                        <p>THE EARTH CREATION first contact</p>
+                                        <span>Flyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrk_s">
+                            <div class="wrk_e">
+                                <a target="_blank">
+                                    <div class="w-img imgrev" onmousemove="vis();" onmouseout="hid();">
+                                        <img class="bg" src="./assets/img/zgowie/need_more_space.jpg">
+                                    </div>
+                                </a>
+                                <div class="w-txt">
+                                    <p>06.</p>
+                                    <div>
+                                        <p>Need more space</p>
+                                        <span>Flyer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="con_p">
-                        <div class="-row icons">
+
+                </section>
+
+                <!--CONTACT-->
+
+                <section class="wrapper" id="03">
+
+                    <div class="text">
+                        <p class="heading-num">03</p>
+                    </div>
+
+                    <div class="con flex">
+                        <div class="-row icons2">
                             <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
                             <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-twitter"></i></a>
                         </div>
-                        <p class="delay">
-                        </p><br>
-                        <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank" class="-btn">
-                            <p>
+                        <div class="con_t">
+                            <h1 id="h1" style="position: relative; z-index: 4;">
                                 <span class="-row">
+                                    <span class="outline -o" >CONTATO</span>
+                                </span>
+                                <span class="-row">
+                                    <span >CONTATO</span>
+                                </span>
+                            </h1>
+                            <h1 id="h1">
+                                <span class="-row">
+                                    <span class="outline -o" style="transition-delay: .5s" >CONTATO</span>
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="con_p">
+                            <div class="-row icons">
+                                <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
+                                <a href="https://www.instagram.com/zgowiecre/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <p class="delay">
+                            </p><br>
+                            <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank" class="-btn">
+                                <p>
+                                    <span class="-row">
                             <span >Entrar em contato</span>
+                                    </span>
+                                </p>
+                                <span class="-row">
+                        <span ><img src="./assets/img/other/seta.svg"></span>
+                                </span>
+                            </a>
+                            <p class="delay copy">
+                                <span class="-row">
+                        <span >Designed and developed by @thomazgg.</span>
+                                </span>
+                                <span class="-row">
+                        <span >© <span style="display: inline;" id="year"></span> All rights reserved.</span>
                                 </span>
                             </p>
-                            <span class="-row">
-                        <span ><img src="./assets/img/other/seta.svg"></span>
-                            </span>
-                        </a>
-                        <p class="delay copy">
-                            <span class="-row">
-                        <span >Designed and developed by @thomazgg.</span>
-                            </span>
-                            <span class="-row">
-                        <span >© <span style="display: inline;" id="year"></span> All rights reserved.</span>
-                            </span>
-                        </p>
+                        </div>
                     </div>
-                </div>
 
-            </section>
+                </section>
 
-            <div class="back-btn-wrap"><a class="back-btn" href="./#about">VOLTAR</a></div>
+                <div class="back-btn-wrap"><a class="back-btn" href="./#about">VOLTAR</a></div>
+
+            </div>
+
+            <script type="text/javascript">
+                if (location.href.indexOf('reload') == 0) {
+                    location.href = location.href + '?reload';
+                }
+            </script>
+
+            <span id="float" class="float beh"><img src="././assets/img/other/loading.gif"></span>
 
         </div>
 
@@ -481,16 +453,17 @@
             </button>
             </div>
         </div>
-        <audio id="myAudio" src="./assets/videos/Music-for-when-you-are-stressed.mp3" onload='playVideo();'></audio>
-        <audio id="buttonClick" src="./assets/videos/button-click.mp3" onload='playVideo();'></audio>
-    </main>
 
-    <span id="float" class="float beh"><img src="././assets/img/other/loading.gif"></span>
+        <audio id="myAudio" src="./assets/videos/Ambiencia.wav" onload='playVideo();'></audio>
+        <audio id="buttonClick" src="./assets/videos/button-click.mp3" onload='playVideo();'></audio>
+
+    </main>
 
     <!-- ======== JS ======== -->
     <section>
         <!-- Index JS file -->
-        <script src="./assets/js/index.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+        <script type="text/javascript" src="./assets/js/index.js"></script>
         <script type="module" src="./assets/js/api.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -499,7 +472,6 @@
 
         <script src="./assets/js/jquery.fullPage.js"></script>
         <script src="./assets/js/common.min.js"></script>
-        <script src="./assets/js/luxy.js"></script>
 
         <script>
             luxy.init();
@@ -583,26 +555,6 @@
                     }
                 }
             };
-        </script>
-
-        <script>
-            setTimeout(function() {
-                document.getElementById('first').click();
-            }, 500);
-
-            $(document).ready(function() {
-                $('.logo-slider ').slick({
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 400,
-                    speed: 1500,
-                    arrows: false,
-                    pauseOnHover: false,
-                    pauseOnFocus: false,
-                    swipeToSlide: true
-                });
-            });
         </script>
 
         <noscript>
