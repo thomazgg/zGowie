@@ -463,14 +463,14 @@ img {
     margin-bottom: 20px;
 }
 
-._text h1 {
+._text h2 {
     max-width: 400px;
     line-height: 3rem;
     font-weight: normal;
 }
 
 @media (max-height: 800px) {
-    ._text h1 {
+    ._text h2 {
         line-height: 2rem;
     }
 }
@@ -486,7 +486,7 @@ img {
 
 .button {
     display: inline-block;
-    font-size: 1.8rem;
+    /*     font-size: 1.8rem; */
     color: var(--textColor);
     background: var(--mainColor);
     line-height: 1;
@@ -500,6 +500,21 @@ img {
     cursor: pointer;
 }
 
+#button {
+    background: none;
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    border-radius: 0px;
+    padding: 15px 0;
+    margin-left: 32px;
+    border-bottom: 1px solid var(--textColor);
+    transition: .6s;
+}
+
+#button:hover {
+    opacity: 0.5;
+}
+
 @media screen and (max-width:1024px) {
     .button {
         font-size: 1.8rem;
@@ -508,6 +523,9 @@ img {
 }
 
 @media screen and (max-width:420px) {
+    .button {
+        font-size: 1.2rem
+    }
     .button {
         font-size: 1.2rem
     }
@@ -2187,8 +2205,16 @@ header .global-nav__sns a:last-child {
     width: 47.5543%
 }
 
-video {
+.astro__video video {
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fullpage__slide video {
     left: 0;
     object-fit: cover;
     position: absolute;
@@ -2205,8 +2231,8 @@ video {
     /*     left: 15%; */
     margin: auto;
     display: flex;
-    justify-content: center;
-    align-self: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #main {
@@ -2218,7 +2244,7 @@ video {
     .video-container {
         top: 20%;
     }
-    video {
+    .fullpage__slide video {
         min-width: 106vh;
         min-height: 60vh;
     }
@@ -2229,7 +2255,7 @@ video {
         height: 520px;
         width: 920px;
     }
-    video {
+    .fullpage__slide video {
         min-width: 86vh;
         min-height: 49vh;
     }
@@ -2240,7 +2266,7 @@ video {
         height: 450px;
         width: 800px;
     }
-    video {
+    .fullpage__slide video {
         min-width: 76vh;
         min-height: 43vh;
     }
@@ -2258,7 +2284,7 @@ video {
         height: 340px;
         width: 600px;
     }
-    video {
+    .fullpage__slide video {
         min-width: 46vh;
         min-height: 26vh;
     }
