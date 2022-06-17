@@ -229,15 +229,14 @@ img {
 
 @media screen and (max-width:420px) {
     .title {
-        width: 76.5%;
-        /*         margin: 0 6.25%; */
-        top: 55%;
+        width: 87.5%;
+        margin: 0 6.25%;
+        top: auto;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-        bottom: 8rem
+        bottom: 15rem
     }
     .title--top {
-        top: 0%;
         margin: 0 13%
     }
     #trabalhamos {
@@ -345,7 +344,7 @@ img {
     color: var(--textColor);
     font-size: 5.8rem;
     line-height: 1.5;
-    letter-spacing: 0.1em
+    letter-spacing: 0.1em;
 }
 
 @media screen and (max-width:1024px) {
@@ -357,7 +356,7 @@ img {
 
 @media screen and (max-width:420px) {
     .title__lead {
-        font-size: 1.2rem
+        font-size: 1.8rem
     }
 }
 
@@ -1525,12 +1524,20 @@ header .global-nav__sns a:last-child {
 @media screen and (max-width:420px) {
     .fullpage__slide {
         display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         max-height: 761px
     }
 }
 
 @media screen and (max-width:420px) {
     .fp-section-1 .fullpage__slide {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         bottom: 0;
         max-height: 667px
     }
