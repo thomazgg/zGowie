@@ -1958,114 +1958,6 @@ header .global-nav__sns a:last-child {
     background-size: 100%
 }
 
-
-/* Moonlight */
-
-.moonlight {
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 29.427%;
-    margin: auto;
-    height: 50vw;
-    width: 50vw;
-    z-index: -100;
-}
-
-@media screen and (max-width:1024px) {
-    .moonlight {
-        width: 100vw;
-        height: 100vw;
-        left: 23%
-    }
-}
-
-@media screen and (max-width:420px) {
-    .moonlight {
-        width: 165vw;
-        height: 165vw;
-        left: 50%;
-        top: -10rem;
-        bottom: auto;
-        -webkit-transform: translate3d(-50%, 0, 0);
-        transform: translate3d(-50%, 0, 0)
-    }
-}
-
-.moonlight__wrap {
-    width: 100%;
-    height: 100%
-}
-
-.moonlight__img {
-    background: url(../img/other/moonlight.svg) no-repeat;
-    background-size: 100%
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -100
-}
-
-@media screen and (max-width:420px) {
-    .background {
-        height: 100%;
-        bottom: 0;
-        margin: auto;
-        max-height: 667px
-    }
-}
-
-.star {
-    width: 1300px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 29.427%;
-    z-index: -100
-}
-
-@media screen and (max-width:1024px) {
-    .star {
-        width: 100vw;
-        left: 23%
-    }
-}
-
-@media screen and (max-width:420px) {
-    .star {
-        left: 0
-    }
-}
-
-.star__img {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
-}
-
-@media screen and (max-width:420px) {
-    .star__img {
-        display: block
-    }
-}
-
-@media screen and (max-width:420px) {
-    .star__img img {
-        -webkit-transform: translate3d(0%, 39%, 0) scale(1.5);
-        transform: translate3d(0%, 39%, 0) scale(1.5)
-    }
-}
-
 .layer {
     width: 100%;
     height: 100%
@@ -2935,7 +2827,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     background: #000;
-    z-index: 200;
+    z-index: 200000;
 }
 
 .loading__wrapper .loader--text {
