@@ -129,7 +129,7 @@
     <main id="barba-wrapper">
         <div class="barba-container" data-namespace="underlayer">
 
-            <div id="luxy" style="background: #181818">
+            <div id="luxy">
 
                 <!--PAGE-TOP-->
 
@@ -173,7 +173,7 @@
                             </h1>
                         </div>
 
-                        <div style="z-index: 2; margin-left: 30.3%; transform: translate3d(0px, -80px, 0px);" class="bnr_img luxy-el" data-speed-y="-19" data-offset="-80">
+                        <div class="bnr_img luxy-el" data-speed-y="-19" data-offset="-80">
                             <img id="imgb" src="./assets/img/other/projects.jpg">
                             <div>
                                 <img id="imgc" src="" class="luxy-el" data-speed-y="15" style="transform: translate3d(0px, 0px, 0px);">
@@ -205,22 +205,23 @@
 
                     <div class="container">
 
-                        <div class="video-container">
+                        <div class="video-container" id="video">
                             <!-- <iframe src="link" loop muted autoplay controls frameborder="0" allowfullscreen></iframe> -->
                         </div>
 
                         <div class="side-bar" id="outerDiv">
-
-                            <ul class="list" id="scrollableContent">
-                                <li id="first" data-src="xTl5S38oOUQ?start=175">PIRADOS do CARIBE no Sea of Thieves</li>
-                                <li data-src="5kmetXU2EJ4?start=494">APRENDI com o GAMES EDUUU no Assassins Creed Valhala</li>
-                                <li data-src="_TwNkaRpYfs?start=3">MEUS AMIGOS GRITAM MAIS que os ZUMBIS no Back 4 Blood</li>
-                                <li data-src="EBZmE6wpyhQ?start=253">O NATAL JÁ CHEGOU!? no Rubber Bandits</li>
-                                <li data-src="yvHncvee7D8?start=300">1 FNAF DOOM e 3 AMIGOS (+16)</li>
-                                <li data-src="4ruzf1JBs8Q?start=170">PROCURADOS 5 ESTRELAS no Red Dead Redemption 2</li>
-                                <li data-src="-JEBhjepv2o?start=205">NOVO JOGO DO 007 ?</li>
-                                <!--<li data-src="id">Nome</li> -->
-                            </ul>
+                            <a class="vd" href="#video">
+                                <ul class="list" id="scrollableContent">
+                                    <li data-src="xTl5S38oOUQ?start=175">PIRADOS do CARIBE no Sea of Thieves</li>
+                                    <li data-src="5kmetXU2EJ4?start=494">APRENDI com o GAMES EDUUU no Assassins Creed Valhala</li>
+                                    <li data-src="_TwNkaRpYfs?start=3">MEUS AMIGOS GRITAM MAIS que os ZUMBIS no Back 4 Blood</li>
+                                    <li data-src="EBZmE6wpyhQ?start=253">O NATAL JÁ CHEGOU!? no Rubber Bandits</li>
+                                    <li data-src="yvHncvee7D8?start=300">1 FNAF DOOM e 3 AMIGOS (+16)</li>
+                                    <li data-src="4ruzf1JBs8Q?start=170">PROCURADOS 5 ESTRELAS no Red Dead Redemption 2</li>
+                                    <li data-src="-JEBhjepv2o?start=205">NOVO JOGO DO 007 ?</li>
+                                    <!--<li data-src="id">Nome</li> -->
+                                </ul>
+                            </a>
 
                         </div>
 
@@ -432,6 +433,11 @@
 
         </div>
 
+        <div class="background">
+            <div class="sky-color" style="background: #181818">
+            </div>
+        </div>
+
         <div class="audio">
             <div class="music">
                 <button class="music-button paused" id="btn" onClick="togglePlay(); buttonClick();">
@@ -546,9 +552,11 @@
                     }
                 }
             };
-            setTimeout(function() {
-                document.getElementById('first').click();
-            }, 500);
+            /*             
+                setTimeout(function() {
+                    document.getElementById('first').click();
+                }, 500); 
+            */
         </script>
 
         <noscript>
