@@ -69,3 +69,13 @@ $(document).ready(function() {
 
 
 });
+
+$('.vd').on('click', function() {
+    $('html, body').animate({ scrollTop: $(this.hash).offset().top - 200 }, 500);
+    return false;
+});
+
+$('.button').on('click', function() {
+    $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+    return false;
+});
