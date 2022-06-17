@@ -12,7 +12,7 @@ website: https://thomazgg.github.io/Portfolio/
 
 /* html {
     scroll-behavior: smooth;
-}
+} */
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -26,8 +26,8 @@ website: https://thomazgg.github.io/Portfolio/
 ::selection,
 ::-webkit-selection {
     color: inherit;
-    background: #181818;
-} */
+    background-color: #181818;
+}
 
 .col-2 {
     width: 16.66%;
@@ -540,6 +540,9 @@ p {
     width: auto;
     height: auto;
     position: relative;
+    z-index: 2;
+    margin-left: 30.3%;
+    transform: translate3d(0px, -80px, 0px);
 }
 
 .bnr_img>div {
@@ -562,6 +565,15 @@ p {
     .bnr_img img {
         margin-top: 40rem;
         z-index: 3;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bnr_t img {
+        width: 55vw;
+    }
+    .bnr_img {
+        margin-left: 24.3%;
     }
 }
 
