@@ -229,17 +229,16 @@ img {
 
 @media screen and (max-width:420px) {
     .title {
-        width: 87.5%;
-        margin: 0 6.25%;
+        width: 76.5%;
+        /*         margin: 0 6.25%; */
+        top: 55%;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         bottom: 8rem
     }
     .title--top {
+        top: 0%;
         margin: 0 13%
-    }
-    .title {
-        top: 55%;
     }
     #trabalhamos {
         font-size: 1.8rem;
@@ -1526,22 +1525,13 @@ header .global-nav__sns a:last-child {
 @media screen and (max-width:420px) {
     .fullpage__slide {
         display: block;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
         max-height: 761px
     }
 }
 
 @media screen and (max-width:420px) {
     .fp-section-1 .fullpage__slide {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
         bottom: 0;
-        margin: auto;
         max-height: 667px
     }
 }
@@ -2734,6 +2724,7 @@ button:focus {
     position: absolute;
     width: calc(3 * var(--card-width));
     height: auto;
+    z-index: 999;
 }
 
 .cardList__btn {
@@ -3107,12 +3098,10 @@ button:focus {
     background-color: var(--textColor)
 }
 
-.music-button.hover .gauge span,
 .music-button:hover .gauge span {
     background-color: var(--mainColor)
 }
 
-.music-button.hover .text,
 .music-button:hover .text {
     opacity: 1
 }
@@ -3126,6 +3115,9 @@ button:focus {
 @media only screen and (max-width:420px) {
     .music {
         bottom: 20px;
+    }
+    .music-button:hover .text {
+        display: none
     }
 }
 
