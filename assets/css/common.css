@@ -3033,7 +3033,6 @@ button:focus {
 .music-button .gauge span {
     display: block;
     width: 2px;
-    background-color: var(--mainColor);
     height: 100%;
     transform-origin: 50% 100%;
     transition: background-color .6s cubic-bezier(.165, .84, .44, 1);
@@ -3098,10 +3097,6 @@ button:focus {
     background-color: var(--textColor)
 }
 
-.music-button:hover .gauge span {
-    background-color: var(--mainColor)
-}
-
 .music-button:hover .text {
     opacity: 1
 }
@@ -3109,6 +3104,12 @@ button:focus {
 @media only screen and (max-width:1250px) {
     .music {
         bottom: 30px;
+    }
+}
+
+@media only screen and (min-width:420px) {
+    .music-button:hover .gauge span {
+        background-color: var(--mainColor)
     }
 }
 
