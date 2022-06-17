@@ -9,24 +9,23 @@ website: https://thomazgg.github.io/Portfolio/
 
 /*UNIVERSAL*/
 
-
-/* html {
+html {
     scroll-behavior: smooth;
-} */
+}
 
 ::-webkit-scrollbar {
     width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #fff;
+    background: var(--textColor);
 }
 
 ::-moz-selection,
-::selection,
-::-webkit-selection {
+ ::selection,
+ ::-webkit-selection {
     color: inherit;
-    background-color: #181818;
+    background: transparent;
 }
 
 .col-2 {
@@ -401,6 +400,12 @@ p {
     transition: .2s;
     transition-property: opacity;
     pointer-events: none;
+}
+
+@media screen and (max-width:1024px) {
+    .float {
+        display: none;
+    }
 }
 
 .beh img {
