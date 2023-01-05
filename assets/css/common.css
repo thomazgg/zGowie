@@ -1242,8 +1242,8 @@ header .menuIcon.js-menuOpen:before {
 .nav-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 66% auto;
-    grid-template-columns: 66% auto;
+    -ms-grid-columns: 46% auto;
+    grid-template-columns: 46% auto;
     background: unset;
 }
 
@@ -1272,7 +1272,7 @@ header .menuIcon.js-menuOpen:before {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 7em;
+    width: 4em;
     float: right;
 }
 
