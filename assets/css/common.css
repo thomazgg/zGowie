@@ -1288,43 +1288,37 @@ header .menuIcon.js-menuOpen:before {
     .nav-container ul {
         margin-left: 18em;
     }
-    /* 
     .social-header {
-        padding: 0em 0em 0em 40em;
+        padding: 0em 0em 0em 45em;
     }
-    */
 }
 
 @media only screen and (min-width: 1600px) and (max-width: 1850px) {
     .nav-container ul {
         margin-left: 8em;
     }
-    /* 
     .social-header {
-        padding: 0em 0em 0em 30em;
+        padding: 0em 0em 0em 39em;
     }
-    */
 }
 
 @media only screen and (min-width: 1500px) and (max-width: 1600px) {
+    .nav-container{
+        grid-template-columns: 86% auto;
+    }
     .nav-container ul {
         margin-left: 0em;
     }
-    /* 
     .social-header {
-        padding: 0em 0em 0em 20em;
+        padding: 0em 0em 0em 37em;
     }
-    */
 }
 
-/* 
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
     .social-header {
         padding: 0em 0em 0em 10em;
     }
 }
-
-*/
 
 @media only screen and (max-width: 1200px) {
     .nav-container {
