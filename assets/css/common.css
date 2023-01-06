@@ -1242,8 +1242,8 @@ header .menuIcon.js-menuOpen:before {
 .nav-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 46% auto;
-    grid-template-columns: 46% auto;
+    -ms-grid-columns: 60% auto;
+    grid-template-columns: 60% auto;
     background: unset;
 }
 
