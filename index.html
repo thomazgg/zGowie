@@ -43,36 +43,8 @@
 
     <!-- preload -->
 
-    <link rel="preload" href="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" as="link">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js" as="link">
-
-    <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" as="script">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" as="script">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" as="script">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" as="script">
-
-    <script rel="preload" href=" ./assets/js/jquery.fullPage.js" as="script"></script>
-    <script rel="preload" href="./assets/js/common.min.js" as="script"></script>
-    <script rel="preload" href="./assets/js/luxy.js" as="script"></script>
-    <script rel="preload" href="./assets/js/api.js" as="script"></script>
-    <script rel="preload" href="./assets/js/script.js" as="script"></script>
-    <script rel="preload" href="./assets/js/index.js" as="script"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    <!--     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-M9FDW7M">
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'GTM-M9FDW7M');
-    </script> 
-    -->
+    <link rel="preload" href="./assets/js/jquery.fullPage.js" as="script">
+    <link rel="preload" href="./assets/js/common.min.js" as="script">
 
 </head>
 
@@ -116,7 +88,7 @@
         </div>
         <nav class="global-nav">
             <ul class="global-nav__list">
-                <li><a href="./index.html#two">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./projects.html">Projetos</a></li>
                 <li>
                     <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">
@@ -130,9 +102,9 @@
                     <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://twitter.com/zgowiecre" target="_blank">
+                    <!-- <a href="https://twitter.com/zgowiecre" target="_blank">
                         <i class="fab fa-twitter"></i>
-                    </a>
+                    </a> -->
                 </li>
             </ul>
         </nav>
@@ -144,337 +116,220 @@
     <!-- ======== MAIN ======== -->
 
     <main id="barba-wrapper">
-        <!-- <div class="barba-container" data-namespace="top"> -->
-        <div class="fullpage fullpage-wrapper" id="js-fullpage">
-            <div class="section">
-                <div class="fullpage__slide">
-                    <div class="title title--top">
-                        <!--<h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">zGowie</h1> -->
-                        <p class="title__lead js-letter" style="transform: translateX(0%) translateZ(0px);">Visite um novo espaço<br>para a criatividade</p>
-                        <div class="border js-letter" style="transform: translateX(0%) translateZ(0px);"><span></span><span class="js-letter" style="transform: translateX(0%) translateZ(0px);" id="open"></span></div>
-                        <div class="btn-wrap js-letter" style="transform: translateX(0%) translateZ(0px);">
-                            <a class="button" href="./index.html#one">Explorar</a>
-                            <a class="button" id="button" href="./projects.html">Projetos</a>
+        <div class="barba-container" data-namespace="top">
+
+            <div class="fullpage fullpage-wrapper" id="js-fullpage">
+                <div class="section">
+                    <div class="fullpage__slide">
+                        <div class="title title--top">
+                            <p class="title__lead js-letter" style="transform: translateX(0%) translateZ(0px);">Visite um novo espaço<br>para a criatividade</p>
+                            <div class="border js-letter" style="transform: translateX(0%) translateZ(0px);"><span></span><span class="js-letter" style="transform: translateX(0%) translateZ(0px);" id="open"></span></div>
+                            <div class="btn-wrap js-letter" style="transform: translateX(0%) translateZ(0px);">
+                                <a class="button" href="./index.html#one">Explorar</a>
+                                <a class="button" id="button" href="./projects.html">Projetos</a>
+                            </div>
+
                         </div>
 
+                        <div id="main_video">
+                            <video id="vid" width="320" height="240" controls frameborder="0" allowfullscreen>
+                                    <source src="/assets/videos/pistola_rosa.mp4" type="video/mp4">
+                                </video>
+                            <button id="close">Close</button>
+                        </div>
+
+                        <div id="bg"></div>
                     </div>
+                </div>
+                <div class="section">
+                    <div class="fullpage__slide">
 
-                    <div id="main_video">
-                        <video id="vid" width="320" height="240" controls frameborder="0" allowfullscreen>
-                                <source src="/assets/videos/pistola_rosa.mp4" type="video/mp4">
-                            </video>
-                        <button id="close">Close</button>
+                        <video class="video-container" width="320" height="240" controls frameborder="0" allowfullscreen>
+                                <source src="./assets/videos/demo_reel_2022.mp4" type="video/mp4">
+                        </video>
+                    
                     </div>
-
-                    <div id="bg"></div>
                 </div>
-            </div>
-            <div class="section">
-                <div class="fullpage__slide">
-
-                    <video class="video-container" width="320" height="240" controls frameborder="0" allowfullscreen>
-                            <source src="./assets/videos/demo_reel_2022.mp4" type="video/mp4">
-                    </video>
-                    <!-- 
-                            <div class="video-container">
-                            <iframe id="main" src="https://www.youtube.com/embed/" allow="accelerometer; picture-in-picture" allowfullscreen></iframe> 
+                <div class="section">
+                    <div class="fullpage__slide">
+                        <div class="title">
+                            <h2 class="title__text js-letter">Projetos</h2>
+                            <div class="border js-letter"><span></span><span class="js-letter"></span></div>
+                            <!--<p class="title__lead js-letter">Veja meus trabalhos<br>mais recentes</p> -->
+                            <div class="btn-wrap js-letter"><a class="button" href="./projects.html">Ver projetos</a></div>
                         </div>
-                    -->
-
-                </div>
-            </div>
-            <div class="section">
-                <div class="fullpage__slide">
-                    <div class="title">
-                        <h2 class="title__text js-letter">Projetos</h2>
-                        <div class="border js-letter"><span></span><span class="js-letter"></span></div>
-                        <!--<p class="title__lead js-letter">Veja meus trabalhos<br>mais recentes</p> -->
-                        <div class="btn-wrap js-letter"><a class="button" href="./projects.html">Ver projetos</a></div>
-                    </div>
-                    <a class="image image--projects" href="./projects.html">
-                        <div class="image__over">
-                            <div class="image__cover"></div>
-                            <div class="image__cover"></div>
-                        </div>
-                        <!--                             
-                            <div class="page-num">
-                                <p>01</p>
-                            </div> 
-                        -->
-                    </a>
-                </div>
-            </div>
-            <div class="section">
-                <div class="fullpage__slide">
-                    <div class="title" id="logo">
-                        <h2 class="title__text js-letter" id="trabalhamos">Já trabalhei com</h2>
-                        <div class="border js-letter" style="margin-bottom: 0.5rem"><span></span><span class="js-letter"></span></div>
-                        <div id="padding">
-                            <img class="js-letter" id="logos" src="./assets/img/zgowie/Logos.png" alt="Logos" />
-                            <img class="js-letter" id="logos2" src="./assets/img/zgowie/Logos2.png" alt="Logos2" />
-                        </div>
-
-
-                        <!--                        
-                            <section class="carousel image" id="logos">
-
-                                <div class="carousel__wrapper">
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/baden-baden.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/cabanga.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/chop_brasil.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/colina.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/eisenbahn.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/ekos.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/fbm_boats.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/heineken.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/morena.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/nvidia.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/paraiso.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/refeno.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/baden-baden.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/cabanga.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/chop_brasil.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/colina.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/eisenbahn.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/ekos.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/fbm_boats.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/heineken.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/morena.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/nvidia.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/paraiso.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide">
-                                        <div class="carousel__image" style="background-image: url('./assets/img/logos/refeno.png');"></div>
-                                    </div>
-                                </div>
-
-                            </section> 
+                        <a class="image image--projects" href="./projects.html">
+                            <div class="image__over">
+                                <div class="image__cover"></div>
+                                <div class="image__cover"></div>
+                            </div>
+                            <!--                             
+                                <div class="page-num">
+                                    <p>01</p>
+                                </div> 
                             -->
-
-
+                        </a>
                     </div>
-                    <!-- 
-                        <a class="image image--logos">
-                            <div class="image__over">
-                                <div class="image__cover"></div>
-                                <div class="image__cover"></div>
-                            </div>
-                        </a> 
-                        -->
-
                 </div>
-            </div>
-            <div class="section">
-                <div class="fullpage__slide">
-                    <div class="title" id="contact">
-                        <h2 class="title__text js-letter" id="quem_somos">Quem sou?</h2>
-                        <div class="border js-letter" style="margin-bottom: 0.5rem"><span></span><span class="js-letter"></span></div>
-                        <div class="btn-wrap js-letter">
-                            <div class="row">
-
-                                <ul class="_text">
-                                    <h2>Sou Bruno Carvalho e esta é a zGowie Creations, sou o único que pode lhe trazer resultados incríveis e maior prospecção de clientes
-                                        na entrega de um vídeo. Para empresas de Rio Claro e região que desejam se destacar das demais na época onde o vídeo é a mais completa
-                                        solução de marketing.</h1>
-                                </ul>
-
-                                <a class="button" href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">Conversar <i class="fas fa-external-link-alt"></i></a>
-
-                            </div>
-
-                        </div>
-                        <!--<ul>
-                            <li class="js-letter"><a href="mailto:zgrowiecre@gmail.com">zgrowiecre@gmail.com</a></li>
-                            <li class="js-letter">
-                                <a href="https://instagram.com/zgowiecre" target="_blank"><i class="fab fa-instagram" alt="instagram"></i></a>
-                                <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
-                                <a href="https://twitter.com/zgowiecre" target="_blank"><i class="fab fa-twitter" alt="twitter"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                    <a class="image image--contact">
-                        <!--                         
-                            <div class="image__over">
-                                <div class="image__cover"></div>
-                                <div class="image__cover"></div>
-                            </div>
-                            <div class="page-num">
-                                <p>02</p>
-                            </div>
-                        -->
-                        <div class="app">
-                            <div class="cardList">
-                                <button class="cardList__btn btn btn--left">
-                                    <div class="icon">
-                                        <svg>
-                                        <use xlink:href="#arrow-left"></use>
-                                        </svg>
-                                    </div>
-                                </button>
-
-                                <div class="cards__wrapper">
-                                    <div class="card current--card">
-                                        <div class="card__image">
-                                            <img src="./assets/img/renders/ASTRONAUTA ITEM.png" alt="Astro" />
-                                        </div>
-                                    </div>
-
-                                    <div class="card next--card">
-                                        <div class="card__image">
-                                            <img src="./assets/img/renders/Purple Hole.png" alt="Purple Hole" />
-                                        </div>
-                                    </div>
-
-                                    <div class="card previous--card">
-                                        <div class="card__image">
-                                            <img src="./assets/img/renders/walkinngf.png" alt="Walkinngf" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button class="cardList__btn btn btn--right">
-                                    <div class="icon">
-                                        <svg>
-                                        <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-
-                            <div class="infoList">
-                                <div class="info__wrapper">
-                                    <div class="info current--info">
-                                        <!--                                             
-                                            <h1 class="text name"></h1>
-                                            <p class="explore a new space"></p> 
-                                        -->
-                                    </div>
-
-                                    <div class="info next--info">
-
-                                    </div>
-
-                                    <div class="info previous--info">
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="app__bg">
-                                <div class="app__bg__image current--image">
-                                    <!--                                         
-                                                <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" /> 
-                                            -->
-                                </div>
-                                <div class="app__bg__image next--image">
-                                    <!--                                         
-                                                <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" /> 
-                                            -->
-                                </div>
-                                <div class="app__bg__image previous--image">
-                                    <!--                                         
-                                                <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" /> 
-                                            -->
-                                </div>
+                <div class="section">
+                    <div class="fullpage__slide">
+                        <div class="title" id="logo">
+                            <h2 class="title__text js-letter" id="trabalhamos">Já trabalhei com</h2>
+                            <div class="border js-letter" style="margin-bottom: 0.5rem"><span></span><span class="js-letter"></span></div>
+                            <div id="padding">
+                                <img class="js-letter" id="logos" src="./assets/img/zgowie/Logos.png" alt="Logos" />
+                                <img class="js-letter" id="logos2" src="./assets/img/zgowie/Logos2.png" alt="Logos2" />
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="fullpage__slide">
+                        <div class="title" id="contact">
+                            <h2 class="title__text js-letter" id="quem_somos">Quem sou?</h2>
+                            <div class="border js-letter" style="margin-bottom: 0.5rem"><span></span><span class="js-letter"></span></div>
+                            <div class="btn-wrap js-letter">
+                                <div class="row">
 
-                        <svg class="icons" style="display: none;">
-                            <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                                <polyline points='328 112 184 256 328 400'
-                                    style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-                            </symbol>
-                            <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
-                                <polyline points='184 112 328 256 184 400'
-                                    style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
-                            </symbol>
-                        </svg>
-                    </a>
+                                    <ul class="_text">
+                                        <h2>Sou Bruno Carvalho e esta é a zGowie Creations, sou o único que pode lhe trazer resultados incríveis e maior prospecção de clientes
+                                            na entrega de um vídeo. Para empresas de Rio Claro e região que desejam se destacar das demais na época onde o vídeo é a mais completa
+                                            solução de marketing.</h1>
+                                    </ul>
 
+                                    <a class="button" href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank">Conversar <i class="fas fa-external-link-alt"></i></a>
+
+                                </div>
+
+                            </div>
+                            <!--<ul>
+                                <li class="js-letter"><a href="mailto:zgrowiecre@gmail.com">zgrowiecre@gmail.com</a></li>
+                                <li class="js-letter">
+                                    <a href="https://instagram.com/zgowiecre" target="_blank"><i class="fab fa-instagram" alt="instagram"></i></a>
+                                    <a href="https://api.whatsapp.com/message/UQIB3CAM3WMRJ1?autoload=1&app_absent=0" target="_blank"><i class="fab fa-whatsapp" alt="whatsapp"></i></a>
+                                    <a href="https://twitter.com/zgowiecre" target="_blank"><i class="fab fa-twitter" alt="twitter"></i></a>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <a class="image image--contact">
+                            <!--                         
+                                <div class="image__over">
+                                    <div class="image__cover"></div>
+                                    <div class="image__cover"></div>
+                                </div>
+                                <div class="page-num">
+                                    <p>02</p>
+                                </div>
+                            -->
+                            <div class="app">
+                                <div class="cardList">
+                                    <button class="cardList__btn btn btn--left">
+                                        <div class="icon">
+                                            <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                            </svg>
+                                        </div>
+                                    </button>
+
+                                    <div class="cards__wrapper">
+                                        <div class="card current--card">
+                                            <div class="card__image">
+                                                <img src="./assets/img/renders/ASTRONAUTA ITEM.png" alt="Astro" />
+                                            </div>
+                                        </div>
+
+                                        <div class="card next--card">
+                                            <div class="card__image">
+                                                <img src="./assets/img/renders/Purple Hole.png" alt="Purple Hole" />
+                                            </div>
+                                        </div>
+
+                                        <div class="card previous--card">
+                                            <div class="card__image">
+                                                <img src="./assets/img/renders/walkinngf.png" alt="Walkinngf" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="cardList__btn btn btn--right">
+                                        <div class="icon">
+                                            <svg>
+                                            <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <div class="infoList">
+                                    <div class="info__wrapper">
+                                        <div class="info current--info">
+                                            <!--                                             
+                                                <h1 class="text name"></h1>
+                                                <p class="explore a new space"></p> 
+                                            -->
+                                        </div>
+
+                                        <div class="info next--info">
+
+                                        </div>
+
+                                        <div class="info previous--info">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="app__bg">
+                                    <div class="app__bg__image current--image">
+                                        <!--                                         
+                                                    <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" /> 
+                                                -->
+                                    </div>
+                                    <div class="app__bg__image next--image">
+                                        <!--                                         
+                                                    <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" /> 
+                                                -->
+                                    </div>
+                                    <div class="app__bg__image previous--image">
+                                        <!--                                         
+                                                    <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" /> 
+                                                -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg class="icons" style="display: none;">
+                                <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                                    <polyline points='328 112 184 256 328 400'
+                                        style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                                </symbol>
+                                <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                                    <polyline points='184 112 328 256 184 400'
+                                        style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                                </symbol>
+                            </svg>
+                        </a>
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- </div> -->
-        <div class="astro">
-            <div class="astro__wrap" data-depth="0.1">
-                <div class="layer astro__video"><video src="./assets/videos/astro.mp4" muted loop autoplay playsinline></video></div>
+
+            <div class="astro">
+                <div class="astro__wrap" data-depth="0.1">
+                    <div class="layer astro__video"><video src="./assets/videos/astro.mp4" muted loop autoplay playsinline></video></div>
+                </div>
             </div>
-        </div>
-        <p class="scrollDown">SCROLLDOWN</p>
-        <div class="background">
-            <div class="sky-color">
+
+            <p class="scrollDown">SCROLLDOWN</p>
+
+            <div class="background">
+                <div class="sky-color"  style="background: #181818">
+                </div>
             </div>
+
         </div>
+        
         <div class="audio">
             <div class="music">
                 <button class="music-button paused" id="btn" onClick="togglePlay(); buttonClick();">
@@ -489,37 +344,30 @@
         </div>
         <audio id="myAudio" src="./assets/videos/Ambiencia.wav" onload='playVideo();'></audio>
         <audio id="buttonClick" src="./assets/videos/button-click.mp3" onload='playVideo();'></audio>
-
+        
     </main>
-
+    
     <!-- ======== JS ======== -->
     <section>
         <!-- Index JS file -->
-        <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+        
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-        <script type="text/javascript" src="./assets/js/script.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
         <script type="text/javascript" src="./assets/js/index.js"></script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <script src=" ./assets/js/jquery.fullPage.js"></script>
         <script src="./assets/js/common.min.js "></script>
 
+
         <noscript>
             Parabéns Viajante do Tempo, você está nos anos 90. Agora, para acessar este site, você precisa
             atualize seu navegador ou habilite o Javascript nas configurações. E por favor não use o Internet Explorer :).
         </noscript>
-
-        <!-- 
-                ___                                   _
-                / __ |   |/ __| |/ /    |\  /| \ /    | \  | / __| |/ /
-                \__ \|   | (__|   <     | \/ |  |     |  | || (__|   <
-                |___/|___|\___|_|\_\    |    |  |     |_/  | \___|_|\_\
-
-        -->
     </section>
 
 </body>
