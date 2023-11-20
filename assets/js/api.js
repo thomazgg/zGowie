@@ -10,26 +10,30 @@ import $ from "https://cdn.skypack.dev/jquery@3.6.0";
 
 
 $(document).ready(function() {
-
     var key = 'AIzaSyA_8P3qH8qSLLO3zxAcjJKMSo0VErrXdXM';
     var playlistId = 'PLydCkvfdgEA7fPMV2Kq9zzFrZVuLgVfVK';
     var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
-
     var options = {
         part: 'snippet',
         key: key,
-        maxResults: 20,
+        maxResults: 99,
         playlistId: playlistId
     }
 
     loadVids();
 
-    function loadVids() {
+    function loadVids(pageToken) {
+        options.pageToken = pageToken;
+
         $.getJSON(URL, options, function(data) {
             var id = data.items[0].snippet.resourceId.videoId;
             mainVid(id);
-            resultsLoop(data);
+            resultsLoop(data.items);
+            // resultsLoop(data.items.reverse()); // Inverte a ordem antes de processar
+            if (data.nextPageToken) {
+                loadVids(data.nextPageToken);
+            }
         });
     }
 
@@ -37,17 +41,23 @@ $(document).ready(function() {
         $('.video-container').html(`<iframe id="video" onClick="togglePlay()" src="https://www.youtube.com/embed/${id}" loop muted autoplay controls frameborder="0" allowfullscreen></iframe>`);
     }
 
-    function resultsLoop(data) {
+    function resultsLoop(items) {
+        var listContainer = $('.list');
+        // listContainer.empty(); // Limpa a lista antes de adicionar os novos itens
 
-        $.each(data.items, function(i, item) {
-
+        $.each(items, function(i, item) {
             var title = item.snippet.title;
             var vid = item.snippet.resourceId.videoId;
-            /* var thumb = item.snippet.thumbnails.medium.url; */
-            /* var desc = item.snippet.description.substring(0, 100); */
+            
+            // Adiciona a classe "active" ao primeiro item
+            var listItem = `<li data-src="${vid}" ${i === 0 ? 'class="active"' : ''}>${title}</li>`;
+            
+            listContainer.append(listItem);
 
-            $('.list').append(`<li data-src="${vid}">${title}</li>`);
-
+            // Se for o primeiro item, atualiza o vídeo principal
+            if (i === 0) {
+                mainVid(vid);
+            }
         });
     }
 
@@ -56,19 +66,16 @@ $(document).ready(function() {
         var id = $(this).attr('data-src');
         mainVid(id);
 
-        var current = document.getElementsByClassName("active");
+        // Remove a classe "active" do elemento atualmente ativo
+        $('.list li.active').removeClass('active');
 
-        // If there's no active class
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
-        }
-
-        // Add the active class to the current/clicked button
-        this.className += " active";
+        // Adiciona a classe "active" ao botão atual/clique
+        $(this).addClass('active');
     });
 
-
 });
+
+
 
 $('.vd').on('click', function() {
     $('html, body').animate({ scrollTop: $(this.hash).offset().top - 200 }, 500);

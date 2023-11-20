@@ -1493,7 +1493,7 @@ header .global-nav__sns a:last-child {
 
 .background {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden
 }
 
@@ -1507,7 +1507,7 @@ header .global-nav__sns a:last-child {
     height: 100vh;
     top: 0;
     left: 0;
-    background: var(--darkColor);
+    background: #181818;
     z-index: -200
 }
 
@@ -2499,48 +2499,6 @@ header .global-nav__sns a:last-child {
 .brands .logo-slider img {
     width: 200px;
 }
-
-
-/* slider */
-
-.carousel {
-    overflow: hidden;
-    width: calc(2 * var(--no-of-slides));
-}
-
-.carousel__wrapper {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.carousel__slide {
-    animation: scroll-loop var(--iteration-time) linear infinite;
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
-    width: var(--slide-width);
-    height: var(--slide-height);
-    box-sizing: border-box;
-}
-
-.carousel__image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    margin: 20px 20px;
-}
-
-@keyframes scroll-loop {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1));
-    }
-}
-
 
 /* card */
 

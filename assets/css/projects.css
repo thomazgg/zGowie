@@ -13,14 +13,6 @@ html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--textColor);
-}
-
 ::-moz-selection,
  ::selection,
  ::-webkit-selection {
@@ -844,13 +836,15 @@ p {
 
 .container .side-bar .list li.active {
     color: var(--lightColor);
-    letter-spacing: 0.1em;
+    /* letter-spacing: 0.1em; */
     transition: ease .5s;
 }
 
 .container .side-bar .list li:hover {
-    opacity: 0.4;
-    letter-spacing: 0.1em;
+    /* opacity: 0.4; */
+    /* letter-spacing: 0.1em; */
+    color: var(--lightColor);
+    transform: translateX(10px);
     transition: ease .5s;
 }
 
@@ -872,8 +866,17 @@ p {
 
 #scrollableContent {
     height: 100%;
-    margin: 0em;
+    margin: 0;
     overflow-y: auto;
+    overflow-x: hidden; /* Isso removerá a barra de rolagem horizontal */
+}
+
+#scrollableContent::-webkit-scrollbar {
+    width: 7px;
+}
+
+#scrollableContent::-webkit-scrollbar-thumb {
+    background: var(--textColor);
 }
 
 @media screen and (max-width: 1700px) {
