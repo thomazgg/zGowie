@@ -75,8 +75,6 @@ $(document).ready(function() {
 
 });
 
-
-
 $('.vd').on('click', function() {
     $('html, body').animate({ scrollTop: $(this.hash).offset().top - 200 }, 500);
     return false;
@@ -86,3 +84,45 @@ $('.button').on('click', function() {
     $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
     return false;
 });
+
+// ! PROJECTS //
+
+// // Supondo que você tenha um array de projetos a serem adicionados
+// var projects = [
+//     { title: 'Theree Stars Kick', description: 'Thumbnail', image: './assets/img/zgowie/kick_star.jpg' },
+//     { title: 'Atlas Rise', description: 'Digital art carrossel', image: './assets/img/zgowie/Atlas-titan.jpg' },
+//     { title: 'Fears', description: 'Streetwear art', image: './assets/img/zgowie/FEARS.jpg' },
+//     { title: 'Halo on Fire', description: 'Digital art carrossel', image: './assets/img/zgowie/demonfull.jpg' },
+//     { title: 'The earth creation', description: 'Streetwear art', image: './assets/img/zgowie/THE CREATION.jpg' },
+//     { title: 'Need more space', description: 'Digital art', image: './assets/img/zgowie/need_more_space.jpg' }
+// ];
+
+// // Obtém o primeiro projeto da lista
+// var primeiroProjeto = projects[0];
+
+// // Clone o primeiro projeto
+// var primeiroElemento = $('.project').first().clone();
+
+// // Ajusta a imagem do primeiro elemento
+// primeiroElemento.find('.bg').attr('src', primeiroProjeto.image);
+// primeiroElemento.find('.w-txt p').first().text('01.');
+// primeiroElemento.find('.w-txt p').last().text(primeiroProjeto.title);
+// primeiroElemento.find('.w-txt span').text(primeiroProjeto.description);
+
+// // Adiciona o primeiro elemento ao final do contêiner
+// $('.wrk').append(primeiroElemento);
+
+// // Itera sobre os demais projetos e adiciona novos elementos
+// for (var i = 1; i < projects.length; i++) {
+//     var projeto = projects[i];
+//     var novoElemento = primeiroElemento.clone();
+
+//     // Ajusta a imagem do novo elemento
+//     novoElemento.find('.bg').attr('src', projeto.image);
+//     novoElemento.find('.w-txt p').first().text((i + 1).toString().padStart(2, '0') + '.');
+//     novoElemento.find('.w-txt p').last().text(projeto.title);
+//     novoElemento.find('.w-txt span').text(projeto.description);
+
+//     // Adiciona o novo elemento ao final do contêiner
+//     $('.wrk').append(novoElemento);
+// }
