@@ -73,15 +73,21 @@ $(document).ready(function() {
     
 
     // CLICK EVENT
+    // Add a flag to prevent scrolling when triggering click event
+    var shouldScroll = true;
+
+    // CLICK EVENT
     $('.list').on('click', 'li', function() {
-        var id = $(this).attr('data-src');
-        mainVid(id);
+        if (shouldScroll) {
+            var id = $(this).attr('data-src');
+            mainVid(id);
 
-        // Remove a classe "active" do elemento atualmente ativo
-        $('.list li.active').removeClass('active');
+            // Remove the class "active" from the currently active element
+            $('.list li.active').removeClass('active');
 
-        // Adiciona a classe "active" ao botão atual/clique
-        $(this).addClass('active');
+            // Add the class "active" to the clicked item
+            $(this).addClass('active');
+        }
     });
 
     $('.vd').on('click', function() {
