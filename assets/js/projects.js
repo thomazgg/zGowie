@@ -50,8 +50,8 @@ $(document).ready(function() {
             var vid = item.snippet.resourceId.videoId;
             
             // Adiciona a classe "active" ao primeiro item
-            var listItem = `<li data-src="${vid}" ${i === 0 ? 'class="active"' : ''}>${title}</li>`;
             
+            var listItem = `<li data-src="${vid}" ${i === 0 ? 'class="active"' : ''}>${title}</li>`;
             listContainer.append(listItem);
 
             // Se for o primeiro item, atualiza o vídeo principal
