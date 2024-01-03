@@ -1593,24 +1593,6 @@ header .global-nav__sns a:last-child {
     transition: .3s;
 }
 
-
-#fp-nav ul:hover li{
-    margin: 0px 0px 60px;
-}
-
-#fp-nav ul:hover li:last-child {
-    margin: 0 0 60px; /* Adicionando a transição também para o último li */
-}
-
-#fp-nav ul:hover a{
-    height: 16px;
-}
-
-#fp-nav ul li a:hover{
-    width: 40px;
-    background: var(--mainColor);
-}
-
 #fp-nav ul li a {
     width: 24px;
     height: 100%;
@@ -1626,8 +1608,27 @@ header .global-nav__sns a:last-child {
     margin-bottom: 0;
 }
 
-#fp-nav ul li .active {
-    width: 40px;
+@media screen and (min-width: 1250px) {
+    #fp-nav ul li .active {
+        width: 40px;
+    }
+
+    #fp-nav ul:hover li{
+        margin: 0px 0px 60px;
+    }
+    
+    #fp-nav ul:hover li:last-child {
+        margin: 0 0 60px; /* Adicionando a transição também para o último li */
+    }
+    
+    #fp-nav ul:hover a{
+        height: 16px;
+    }
+    
+    #fp-nav ul li a:hover{
+        width: 40px;
+        background: var(--mainColor);
+    }
 }
 
 @media screen and (max-width: 1250px) {
@@ -1660,21 +1661,6 @@ header .global-nav__sns a:last-child {
         height: 32px;
     }
 }
-
-@media screen and (max-width: 1250px) {
-    #fp-nav ul li:hover a {
-        height: 40px;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    #fp-nav ul li:hover a {
-        height: 32px;
-        margin-bottom: 20px;
-    }
-}
-
 
 /* ! Moon
 ! ----------------------------------------------- */
