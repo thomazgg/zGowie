@@ -17,7 +17,7 @@ $(document).ready(function() {
     var options = {
         part: 'snippet',
         key: key,
-        maxResults: 99,
+        maxResults: 50,
         playlistId: playlistId
     }
 
@@ -25,41 +25,46 @@ $(document).ready(function() {
 
     function loadVids(pageToken) {
         options.pageToken = pageToken;
-
+    
         $.getJSON(URL, options, function(data) {
             var id = data.items[0].snippet.resourceId.videoId;
             mainVid(id);
             resultsLoop(data.items);
-            // resultsLoop(data.items.reverse()); // Inverte a ordem antes de processar
+    
+            // Trigger click event on the first item
+            $('.list li:first-child').click();
+    
             if (data.nextPageToken) {
                 loadVids(data.nextPageToken);
             }
         });
     }
+    
 
     function mainVid(id) {
         $('.video-container').html(`<iframe id="video" onClick="togglePlay()" src="https://www.youtube.com/embed/${id}" loop muted autoplay controls frameborder="0" allowfullscreen></iframe>`);
     }
-
+    
     function resultsLoop(items) {
         var listContainer = $('.list');
         // listContainer.empty(); // Limpa a lista antes de adicionar os novos itens
-
+    
         $.each(items, function(i, item) {
             var title = item.snippet.title;
             var vid = item.snippet.resourceId.videoId;
-            
-            // Adiciona a classe "active" ao primeiro item
-            
-            var listItem = `<li data-src="${vid}" ${i === 0 ? 'class="active"' : ''}>${title}</li>`;
+    
+            // Adiciona os itens à lista
+            var listItem = `<li data-src="${vid}">${title}</li>`;
             listContainer.append(listItem);
-
-            // Se for o primeiro item, atualiza o vídeo principal
-            if (i === 0) {
-                mainVid(vid);
+    
+            // Se for o último item, adiciona a classe "active" ao primeiro item
+            if (i === items.length - 1) {
+                $('.list li:first-child').addClass('active');
+                mainVid(items[0].snippet.resourceId.videoId);
             }
         });
     }
+    
 
     // CLICK EVENT
     $('.list').on('click', 'li', function() {
@@ -73,17 +78,35 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    $('.vd').on('click', function() {
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top - 200 }, 500);
+        return false;
+    });
+    
+    // Adicione este código no final do seu script, após a declaração da função `loadVids`
+    
+    // CLICK EVENT para o botão "Explorar"
+    $('.button').on('click', function() {
+        // Obtém o ID do primeiro vídeo
+        var firstVideoId = $('.list li:first-child').attr('data-src');
+        
+        // Reproduz o primeiro vídeo
+        mainVid(firstVideoId);
+    
+        // Adiciona a classe "active" ao primeiro item da lista
+        $('.list li.active').removeClass('active');
+        $('.list li:first-child').addClass('active');
+    
+        // Rola a página até o topo da lista de vídeos
+        $('html, body').animate({ scrollTop: $('.list').offset().top - 200 }, 500);
+    
+        return false;
+    });
+
 });
 
-$('.vd').on('click', function() {
-    $('html, body').animate({ scrollTop: $(this.hash).offset().top - 200 }, 500);
-    return false;
-});
 
-$('.button').on('click', function() {
-    $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-    return false;
-});
+
 
 // ! PROJECTS //
 
