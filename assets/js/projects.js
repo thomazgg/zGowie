@@ -36,9 +36,6 @@ $(document).ready(function() {
 
             // Trigger click event on the first item
             $('.list li:first-child').click();
-
-            // Reset the flag to allow scrolling for future clicks
-            shouldScroll = true;
     
             if (data.nextPageToken) {
                 loadVids(data.nextPageToken);
@@ -71,23 +68,16 @@ $(document).ready(function() {
         });
     }
     
-
-    // CLICK EVENT
-    // Add a flag to prevent scrolling when triggering click event
-    var shouldScroll = true;
-
     // CLICK EVENT
     $('.list').on('click', 'li', function() {
-        if (shouldScroll) {
-            var id = $(this).attr('data-src');
-            mainVid(id);
+        var id = $(this).attr('data-src');
+        mainVid(id);
 
-            // Remove the class "active" from the currently active element
-            $('.list li.active').removeClass('active');
+        // Remove a classe "active" do elemento atualmente ativo
+        $('.list li.active').removeClass('active');
 
-            // Add the class "active" to the clicked item
-            $(this).addClass('active');
-        }
+        // Adiciona a classe "active" ao botão atual/clique
+        $(this).addClass('active');
     });
 
     $('.vd').on('click', function() {
