@@ -31,8 +31,14 @@ $(document).ready(function() {
             mainVid(id);
             resultsLoop(data.items);
     
+            // Set the flag to prevent scrolling
+            shouldScroll = false;
+
             // Trigger click event on the first item
             $('.list li:first-child').click();
+
+            // Reset the flag to allow scrolling for future clicks
+            shouldScroll = true;
     
             if (data.nextPageToken) {
                 loadVids(data.nextPageToken);

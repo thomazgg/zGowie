@@ -915,7 +915,7 @@ img {
 }
 
 .back-arrow.js-color {
-    color: var(--darkColor)
+    color: var(--textColor);
 }
 
 .page-top {
