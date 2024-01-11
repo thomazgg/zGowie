@@ -887,7 +887,7 @@ p {
     height: 100%;
     margin: 0;
     overflow-y: auto;
-    overflow-x: hidden; /* Isso removerá a barra de rolagem horizontal */
+    overflow-x: hidden;
 }
 
 #scrollableContent::-webkit-scrollbar {
@@ -896,6 +896,10 @@ p {
 
 #scrollableContent::-webkit-scrollbar-thumb {
     background: var(--textColor);
+}
+
+.container .overlay {
+    display: none;
 }
 
 @media screen and (max-width: 1700px) {
@@ -922,6 +926,32 @@ p {
         padding-right: 0rem;
         margin: 5rem 0rem 5rem 0rem;
         align-items: center;
+    }
+
+    .container .side-bar .list {
+        display: none;
+    }
+
+    .container .overlay.active .list {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container .overlay.active .list li:last-child {
+        border-bottom: none;
+    }
+
+    .container .overlay.active .close-btn {
+        align-self: flex-end;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .container .overlay.active .list {
+        display: flex;
     }
 }
 

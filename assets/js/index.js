@@ -1,39 +1,3 @@
-/* =================
-
-author: Joao Thomaz
-email: uthomaz7@gmail.com
-website: https://thomazgg.github.io/Portfolio/
-  
-================= */
-
-/* ================= music function =================*/
-
-function togglePlay() {
-    var myAudio = document.getElementById("myAudio");
-    var text = document.getElementById("text");
-    var btn = document.getElementById("btn");
-
-    myAudio.volume = 0.2;
-    return myAudio.paused ? myAudio.play(
-        text.innerHTML = "O Som está ligado",
-        btn.classList.remove('paused')
-    ) : myAudio.pause(
-        text.innerHTML = "O Som está desligado",
-        btn.classList.add('paused')
-    );
-};
-
-function buttonClick() {
-    var buttonClick = document.getElementById("buttonClick");
-
-    buttonClick.volume = 0.2;
-    return buttonClick.paused ? buttonClick.play() : buttonClick.pause();
-};
-
-/* ================= cardList =================*/
-
-console.clear();
-
 const { gsap, imagesLoaded } = window;
 
 const buttons = {
